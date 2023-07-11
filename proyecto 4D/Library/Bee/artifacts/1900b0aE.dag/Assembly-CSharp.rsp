@@ -359,6 +359,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/scripts/camara/MoveCamera.cs"
 "Assets/scripts/camara/PlayerCam.cs"
+"Assets/scripts/jugador/PlayerMovement.cs"
 "Assets/scripts/Monstruo 1/Monstruo1.cs"
 -langversion:9.0
 
