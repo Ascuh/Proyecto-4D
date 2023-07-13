@@ -13,7 +13,11 @@ TagManager:
   - UI
   - Ground
   - Player
+<<<<<<< HEAD
   - Obstacle
+=======
+  - whatIsGround
+>>>>>>> f917ab0338a5ed1d606de90f625828ac9833db77
   - 
   - 
   - 
