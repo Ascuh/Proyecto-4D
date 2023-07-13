@@ -9,7 +9,10 @@
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
 { "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 { "pid": 0, "tid": 1, "ts": 1689099193049634, "dur": 2088239, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
 { "pid": 0, "tid": 1, "ts": 1689099193057208, "dur": 204874, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
 { "pid": 0, "tid": 1, "ts": 1689099193262515, "dur": 1697609, "ph": "X", "name": "Run Backend", "args": {} },
@@ -1131,6 +1134,7 @@
 ,{ "pid":12345, "tid":0, "ts":1689099194662474, "dur":12140, "ph":"X", "name": "ProfilerWriteOutput" }
 ,{ "pid": 0, "tid": 1, "ts": 1689099195215179, "dur": 16883, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
 { "pid": 0, "tid": 1, "ts": 1689099195178462, "dur": 53717, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+<<<<<<< Updated upstream
 =======
 { "pid": 0, "tid": 1, "ts": 1689166024511730, "dur": 1987141, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
 { "pid": 0, "tid": 1, "ts": 1689166024518374, "dur": 357199, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
@@ -2258,6 +2262,8 @@
 ,{ "pid": 0, "tid": 1, "ts": 1689166026523563, "dur": 10244, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
 { "pid": 0, "tid": 1, "ts": 1689166026512863, "dur": 21064, "ph": "X", "name": "Write chrome-trace events", "args": {} },
 >>>>>>> f917ab0338a5ed1d606de90f625828ac9833db77
+=======
+>>>>>>> Stashed changes
 {}
 
 ]
