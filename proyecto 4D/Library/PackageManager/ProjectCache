@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638246120522192350
-    m_Hash: 3361241795
+      ticks: 638248531763548350
+    m_Hash: 425611839
   m_LockFileStatus:
     m_FilePath: C:/Users/47653824/Documents/GitHub/Proyecto-4D/proyecto 4D/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638246120522662369
-    m_Hash: 3032764422
+      ticks: 638248531763628346
+    m_Hash: 2196822221
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
