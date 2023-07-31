@@ -900,15 +900,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   groundDrag: 5
-  jumpForce: 6
-  jumpCoolDown: 0.5
-  airMultiplier: 0.4
+  jumpForce: 7
+  jumpCoolDown: 0.6
+  airMultiplier: 2
   jumpKey: 32
   playerHeight: 1.8
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   orientation: {fileID: 281002282}
+  fuerzaSalto: 10
+  modificadorGravedad: 3
 --- !u!65 &2144205208
 BoxCollider:
   m_ObjectHideFlags: 0

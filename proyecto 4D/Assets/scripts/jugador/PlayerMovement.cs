@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
-        
+
     [Header("Ground Ckeck")]
     public float playerHeight;
     public LayerMask whatIsGround;
@@ -31,17 +31,20 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    public float modificadorGravedad;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        Physics.gravity *= modificadorGravedad;
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(grounded);
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
@@ -61,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(grounded)
         MovePlayer();
     }
 
@@ -94,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
         else if (grounded == false)
         { 
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+
+
         }
     }
 
