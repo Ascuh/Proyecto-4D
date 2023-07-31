@@ -13,32 +13,35 @@ public class Monstruo1 : MonoBehaviour
     Vector3 destPoint;
     bool walkPointSet;
     [SerializeField] float range;
-    [SerializeField] float radius;
-    [SerializeField] float angle;
+    [SerializeField] float sightRange;
+    [SerializeField] float attackRange;
+    bool inSight = false;
+    bool inRange = false;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        StartCoroutine(FOVRoutine());
     }
 
     void Update()
     {
+        inSight = Physics.CheckSphere(transform.position, sightRange, playerLayer);
+        inRange = Physics.CheckSphere(transform.position, attackRange, playerLayer);
 
-        if (!chasing)
-        {
+        if (!inSight && !inRange)
             Patrol();
-        }
+        
+        if (inSight || !inRange)
+            Chase();
 
-
+        if (inSight && inRange)
+            Attack();
 
     }
 
 
     void Patrol()
     {
-        if (!chasing)
-        {
             if (!walkPointSet)
             {
                 SearchForDest();
@@ -53,7 +56,15 @@ public class Monstruo1 : MonoBehaviour
             {
                 walkPointSet = false;
             }
-        }
+    }
+
+    void Chase()
+    {
+        agent.SetDestination(player.transform.position);
+    }
+
+    void Attack()
+    {
 
     }
 
@@ -73,46 +84,4 @@ public class Monstruo1 : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            attackPlayer();
-        }
-    }
-
-    private IEnumerator FOVRoutine()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.2f);
-        while (true)
-        {
-            yield return wait;
-            FieldOfViewCheck();
-        }
-    }
-
-    private void FieldOfViewCheck()
-    {
-        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, playerLayer);
-
-        if(rangeChecks.Length != 0)
-        {
-            Transform target = rangeChecks[0].transform;
-            Vector3 directionToTarget = (target.position - transform.position).normalized;
-
-            if (Vector3.Angle(transform.forward, directionToTarget) > angle / 2)
-            {
-                float distanceToTarget = Vector3.Distance(transform.position, target.position);
-
-                if (!Physics.Raycast(transform.position, directionToTarget, obstacleLayer))
-                    chasing = true;
-                else chasing = false;
-            }
-            else chasing = false;
-        }
-    }
-    private void attackPlayer()
-    {
-
-    }
 }
