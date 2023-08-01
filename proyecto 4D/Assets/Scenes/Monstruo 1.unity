@@ -282,17 +282,18 @@ MonoBehaviour:
   player: {fileID: 168513834}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
-  chasing: 0
   range: 15
-  sightRange: 0.2
-  attackRange: 0.01
+  sightRange: 5
+  attackRange: 1
+  inSight: 0
+  inRange: 0
 --- !u!65 &338333957
 BoxCollider:
   m_ObjectHideFlags: 0

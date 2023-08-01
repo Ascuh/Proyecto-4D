@@ -8,15 +8,14 @@ public class Monstruo1 : MonoBehaviour
     public GameObject player;
     NavMeshAgent agent;
     [SerializeField]LayerMask groundLayer, playerLayer, obstacleLayer;
-    [SerializeField]bool chasing = false;
 
     Vector3 destPoint;
     bool walkPointSet;
     [SerializeField] float range;
     [SerializeField] float sightRange;
     [SerializeField] float attackRange;
-    bool inSight = false;
-    bool inRange = false;
+    [SerializeField] bool inSight = false;
+    [SerializeField] bool inRange = false;
 
     void Start()
     {
@@ -60,6 +59,7 @@ public class Monstruo1 : MonoBehaviour
 
     void Chase()
     {
+        if (inSight)
         agent.SetDestination(player.transform.position);
     }
 
@@ -70,8 +70,6 @@ public class Monstruo1 : MonoBehaviour
 
     void SearchForDest()
     {
-        if (!chasing)
-        {
         float z = Random.Range(range, -range);
         float x = Random.Range(range, -range);
         destPoint = new Vector3(transform.position.x + x, transform.position.y, transform.position.z + z);
@@ -80,8 +78,6 @@ public class Monstruo1 : MonoBehaviour
         {
             walkPointSet = true;
         }
-        }
-
     }
 
 }
