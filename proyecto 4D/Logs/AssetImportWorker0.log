@@ -15,9 +15,15 @@ C:/Users/Ascuh/Documents/GitHub/Proyecto-4D/proyecto 4D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< Updated upstream
 52690
 Successfully changed project path to: C:/Users/Ascuh/Documents/GitHub/Proyecto-4D/proyecto 4D
 C:/Users/Ascuh/Documents/GitHub/Proyecto-4D/proyecto 4D
+=======
+54561
+Successfully changed project path to: C:/Users/47653824/Documents/GitHub/Proyecto-4D/proyecto 4D
+C:/Users/47653824/Documents/GitHub/Proyecto-4D/proyecto 4D
+>>>>>>> Stashed changes
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,11 +53,19 @@ C:/Users/Ascuh/Documents/GitHub/Proyecto-4D/proyecto 4D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< Updated upstream
 Player connection [9480] Host "[IP] 192.168.0.147 [Port] 0 [Flags] 2 [Guid] 3012342467 [EditorId] 3012342467 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L2VTV3S) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
 Player connection [9480] Host "[IP] 192.168.0.147 [Port] 0 [Flags] 2 [Guid] 3012342467 [EditorId] 3012342467 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L2VTV3S) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 Refreshing native plugins compatible for Editor in 99.34 ms, found 3 plugins.
+=======
+Player connection [12896] Host "[IP] 10.4.4.44 [Port] 0 [Flags] 2 [Guid] 2936550781 [EditorId] 2936550781 [Version] 1048832 [Id] WindowsEditor(7,B-19F0250) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [12896] Host "[IP] 10.4.4.44 [Port] 0 [Flags] 2 [Guid] 2936550781 [EditorId] 2936550781 [Version] 1048832 [Id] WindowsEditor(7,B-19F0250) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 294.85 ms, found 3 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.15f1 (e8e88683f834)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/Resources/UnitySubsystems
@@ -67,10 +81,15 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56624
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56836
+>>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+<<<<<<< Updated upstream
 Registered in 0.005619 seconds.
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 99.69 ms, found 3 plugins.
@@ -80,10 +99,24 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (573ms)
 		BeginReloadAssembly (61ms)
+=======
+Registered in 0.164980 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 290.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.923 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3925ms)
+		BeginReloadAssembly (663ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (1ms)
 		EndReloadAssembly (419ms)
 			LoadAssemblies (59ms)
@@ -99,17 +132,40 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (1ms)
 				ProcessInitializeOnLoadAttributes (107ms)
 				ProcessInitializeOnLoadMethodAttributes (39ms)
+=======
+			CreateAndSetChildDomain (4ms)
+		EndReloadAssembly (2205ms)
+			LoadAssemblies (658ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (469ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (110ms)
+			SetupLoadedEditorAssemblies (1411ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (240ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (291ms)
+				BeforeProcessingInitializeOnLoad (5ms)
+				ProcessInitializeOnLoadAttributes (653ms)
+				ProcessInitializeOnLoadMethodAttributes (220ms)
+>>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.007041 seconds.
+=======
+Registered in 0.021342 seconds.
+Android Extension - Scanning For ADB Devices 6870 ms
+>>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Ascuh\Documents\GitHub\Proyecto-4D\proyecto 4D\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Ascuh\Documents\GitHub\Proyecto-4D\proyecto 4D\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 104.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -150,6 +206,50 @@ Unloading 5114 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 37 unused Assets / (0.8 MB). Loaded Objects now: 5568.
 Memory consumption went from 270.7 MB to 269.9 MB.
 Total: 3.537800 ms (FindLiveObjects: 0.348000 ms CreateObjectMapping: 0.268300 ms MarkObjects: 2.618300 ms  DeleteObjects: 0.302700 ms)
+=======
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.293 seconds
+Domain Reload Profiling:
+	ReloadAssembly (6296ms)
+		BeginReloadAssembly (571ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (23ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (54ms)
+		EndReloadAssembly (5016ms)
+			LoadAssemblies (706ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1898ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (248ms)
+			SetupLoadedEditorAssemblies (2058ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (81ms)
+				SetLoadedEditorAssemblies (5ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (739ms)
+				ProcessInitializeOnLoadAttributes (1070ms)
+				ProcessInitializeOnLoadMethodAttributes (131ms)
+				AfterProcessingInitializeOnLoad (28ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
+Refreshing native plugins compatible for Editor in 1.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3387 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (113.5 KB). Loaded Objects now: 3851.
+Memory consumption went from 117.2 MB to 117.1 MB.
+Total: 12.465700 ms (FindLiveObjects: 1.074100 ms CreateObjectMapping: 0.793700 ms MarkObjects: 9.894100 ms  DeleteObjects: 0.699900 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,6 +263,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
   Time since last request: 90257.251062 seconds.
   path: Assets/Materials
   artifactKey: Guid(4b70b099c9f038f4bb73fc72605afac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -2773,3 +2874,45 @@ Received Import Request.
   path: Assets/Materials/splash.mat
   artifactKey: Guid(a40899e98d11710438ce5be7f2e08fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Materials/splash.mat using Guid(a40899e98d11710438ce5be7f2e08fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '711ba5274a172ac0d2fcd4493f0fff01') in 0.068404 seconds 
+=======
+  Time since last request: 12741.061489 seconds.
+  path: Assets/Models
+  artifactKey: Guid(467b033c01f1dff4e99842e9713ec408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models using Guid(467b033c01f1dff4e99842e9713ec408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eacef76be310c9f4204e5c53aa56aed7') in 0.040713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 39.532008 seconds.
+  path: Assets/Models/BañoEstructura.fbx
+  artifactKey: Guid(4ce21a397f71abb44aafe126311237ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/BañoEstructura.fbx using Guid(4ce21a397f71abb44aafe126311237ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e29b9b7efa3e4d82724617f72d65b19') in 0.945533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.874395 seconds.
+  path: Assets/Models/BañoEstructura.fbx
+  artifactKey: Guid(4ce21a397f71abb44aafe126311237ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/BañoEstructura.fbx using Guid(4ce21a397f71abb44aafe126311237ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb67b3712c618d80378814725b69d4f') in 0.179591 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.807923 seconds.
+  path: Assets/pinoooo (1).fbx
+  artifactKey: Guid(2892813be794cab43acc66a91ba97229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/pinoooo (1).fbx using Guid(2892813be794cab43acc66a91ba97229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ca4b0ee31e75d0d633d50fab95c111f') in 3.281727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 145.188374 seconds.
+  path: Assets/puertaBaño.fbx
+  artifactKey: Guid(9b4f7b2fa88739b4e8ee6443a9a48f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/puertaBaño.fbx using Guid(9b4f7b2fa88739b4e8ee6443a9a48f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a706a23bc36cd0eea25ba2078b7cee0b') in 0.174492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.006985 seconds.
+  path: Assets/Models/puertaBaño.fbx
+  artifactKey: Guid(9b4f7b2fa88739b4e8ee6443a9a48f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/puertaBaño.fbx using Guid(9b4f7b2fa88739b4e8ee6443a9a48f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cf2af6f452b0f399e388ac1ddf3095b') in 0.182291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.116328 seconds.
+  path: Assets/Models/puertaBaño.fbx
+  artifactKey: Guid(9b4f7b2fa88739b4e8ee6443a9a48f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/puertaBaño.fbx using Guid(9b4f7b2fa88739b4e8ee6443a9a48f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aa1a0fe863357c078c70f56ca28a4c0') in 0.142316 seconds 
+>>>>>>> Stashed changes
