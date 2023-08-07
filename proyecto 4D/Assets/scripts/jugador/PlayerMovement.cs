@@ -33,6 +33,14 @@ public class PlayerMovement : MonoBehaviour
 
     public float modificadorGravedad;
 
+    [Header("Stamina")]
+    public float maxStamina;
+    public float staminaDrain;
+    public float staminaRegen;
+    public float stamina;
+    private bool tired;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +53,35 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (stamina >= -1)
+        {
+            if (Input.GetKey(KeyCode.LeftShift) && !tired)
+            {
+                moveSpeed = 6;
+                stamina -= staminaDrain * Time.deltaTime;
+            }
+
+            else
+            {
+                moveSpeed = 4;
+                if (stamina <= maxStamina)
+                {
+                    stamina += staminaRegen * Time.deltaTime;
+                }
+            }
+        }
+               
+
+            if(stamina <= 0)
+            {
+                tired = true;
+            }
+
+            if (stamina >= 100) { 
+                tired = false;
+        }
+       
+
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
@@ -77,11 +114,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey(jumpKey) && readyToJump && grounded)
         {
-            readyToJump = false;
+                readyToJump = false;
 
-            Jump();
+                Jump();
 
-            Invoke(nameof(resetJump), jumpCoolDown);
+                Invoke(nameof(resetJump), jumpCoolDown);
         }
     }
 
