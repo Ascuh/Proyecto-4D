@@ -10663,8 +10663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4e4d111421fcd4499596d405007e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  groundDrag: 5
+  moveSpeed: 4
+  groundDrag: 6
   jumpForce: 7
   jumpCoolDown: 0.6
   airMultiplier: 2
@@ -10679,6 +10679,8 @@ MonoBehaviour:
   staminaDrain: 30
   staminaRegen: 40
   stamina: 100
+  crouchSpeed: 3
+  crouchYScale: 0.5
 --- !u!65 &2144205208
 BoxCollider:
   m_ObjectHideFlags: 0

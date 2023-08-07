@@ -39,6 +39,13 @@ public class PlayerMovement : MonoBehaviour
     public float staminaRegen;
     public float stamina;
     private bool tired;
+    private bool Running;
+
+    [Header("Crouch")]
+    public float crouchSpeed;
+    public float crouchYScale;
+    private float startYscale;
+
 
 
     // Start is called before the first frame update
@@ -48,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         Physics.gravity *= modificadorGravedad;
+
+        startYscale = transform.localScale.y;
     }
 
     // Update is called once per frame
@@ -55,19 +64,40 @@ public class PlayerMovement : MonoBehaviour
     {
         if (stamina >= -1)
         {
-            if (Input.GetKey(KeyCode.LeftShift) && !tired)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !tired)
             {
+                Running = true;
                 moveSpeed = 6;
-                stamina -= staminaDrain * Time.deltaTime;
             }
 
-            else
+            else if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+                rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+                moveSpeed = crouchSpeed;
+            }
+            else if (Input.GetKeyUp(KeyCode.LeftControl))
+                {
+                    transform.localScale = new Vector3(transform.localScale.x, startYscale, transform.localScale.z);
+                    moveSpeed = 4;
+                }
+
+            else if (Input.GetKeyUp(KeyCode.LeftShift)) 
             {
                 moveSpeed = 4;
+                Running = false;
+            }
+
+            if(!Running || tired)
+            {
                 if (stamina <= maxStamina)
                 {
                     stamina += staminaRegen * Time.deltaTime;
                 }
+            }
+            if (Running)
+            {
+                stamina -= staminaDrain * Time.deltaTime;
             }
         }
                
@@ -120,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
 
                 Invoke(nameof(resetJump), jumpCoolDown);
         }
+ 
     }
 
     private void MovePlayer()
