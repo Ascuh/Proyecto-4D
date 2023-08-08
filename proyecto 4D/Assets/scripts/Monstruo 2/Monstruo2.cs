@@ -10,15 +10,12 @@ public class Monstruo2 : MonoBehaviour
     [SerializeField] LayerMask groundLayer, playerLayer, obstacleLayer;
 
     float timer;
-
     Vector3 destPoint;
-    bool walkPointSet;
     [SerializeField] float range;
-    List<Transform> targets;
+    [SerializeField]List<Transform> targets = new List<Transform>();
 
     void Start()
     {
-        destPoint = targets[0].position;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -26,22 +23,38 @@ public class Monstruo2 : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= 1)
-            AddWaypoint();
-
-
-        if (Vector3.Distance(transform.position, destPoint) < 10)
+        if (timer >= 3)
         {
-            targets.RemoveAt(0);
+            Debug.Log("Adding Waypoint");
+            AddWaypoint(player.transform.position); 
+            timer = 0;
+        }
+
+        if (targets.Count > 0)
+        {
             destPoint = targets[0].position;
+
+            if (Vector3.Distance(transform.position, destPoint) < 20)
+            {
+                print("Moving to: " + destPoint);
+                agent.SetDestination(destPoint);
+                targets.RemoveAt(0);
+
+                if (targets.Count > 0)
+                {
+                    destPoint = targets[0].position;
+                }
+            }
         }
     }
 
-
-
-    public void AddWaypoint()
+    public void AddWaypoint(Vector3 waypointPosition)
     {
+        while (targets.Count > 0 && targets[0].position != waypointPosition)
+        {
+            targets.RemoveAt(0);
+        }
+
         targets.Add(player.transform);
     }
-
 }
