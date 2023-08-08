@@ -383,6 +383,8 @@
 "Assets/scripts/jugador/PlayerMovement.cs"
 "Assets/scripts/Monstruo 1/Monstruo1.cs"
 "Assets/scripts/Monstruo 2/Monstruo2.cs"
+"Assets/scripts/objetos/AgarrarObjetos.cs"
+"Assets/scripts/objetos/Objeto.cs"
 -langversion:9.0
 
 /deterministic
