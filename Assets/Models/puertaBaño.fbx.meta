@@ -18,12 +18,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: brown_planks_03_diff_4k
-    second: {fileID: 2800000, guid: b8c034c689776a34bae6f09f7f6ef999, type: 3}
+    second: {fileID: 2800000, guid: 52c0ba805171da045a2eacd836dfbf90, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wood_plank_wall_diff_4k
-    second: {fileID: 2800000, guid: da6be0bf17d917d4cb2a4aba55fa3348, type: 3}
+    second: {fileID: 2800000, guid: 11e0bd2c5262fda4ba31db4f696a5eae, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -5,10 +5,20 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: ecf93cbb2efaf4f49b09cedbeec3422b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 34499462fff4e264c97745ab65f234cb, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: weathered_planks_diff_4k
-    second: {fileID: 2800000, guid: a9c95065669cf294f87ac6aff92e16e9, type: 3}
+    second: {fileID: 2800000, guid: 997621d8de514874aa70562cf11611a8, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
