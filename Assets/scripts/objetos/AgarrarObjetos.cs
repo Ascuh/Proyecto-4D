@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class AgarrarObjetos : MonoBehaviour
 {
-    public Objeto objectScript;
     public Rigidbody rb;
     public BoxCollider coll;
-    public Transform player, gunContainer, fpsCam;
+    public Transform player, ObjectContainer, MainCam;
 
     public float pickUpRange;
     public float dropForwardForce, dropUpwardForce;
@@ -18,15 +18,15 @@ public class AgarrarObjetos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+     
+
         if (!equipped)
         {
-            objectScript.enabled = false;
             rb.isKinematic = false;
             coll.isTrigger = false;
         }
         if (equipped)
         {
-            objectScript.enabled = true;
             rb.isKinematic = true;
             coll.isTrigger = true;
             slotFull = true;
@@ -35,7 +35,8 @@ public class AgarrarObjetos : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
+
         //se fija si el jugador esta en el rango y si la "e" esta apretada
         Vector3 distanceToPlayer = player.position - transform.position;
         if(!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull)
@@ -56,7 +57,7 @@ public class AgarrarObjetos : MonoBehaviour
         slotFull = true;
 
         //hace al objeto child de la camara y lo mueve a esa pocision
-        transform.SetParent(gunContainer);
+        transform.SetParent(ObjectContainer);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.Euler(Vector3.zero);
         transform.localScale = Vector3.one;
@@ -65,8 +66,6 @@ public class AgarrarObjetos : MonoBehaviour
         rb.isKinematic = true;
         coll.isTrigger = true;
 
-        //activa el script del objeto
-        objectScript.enabled = true;
     }
 
     private void Drop()
@@ -82,17 +81,18 @@ public class AgarrarObjetos : MonoBehaviour
         coll.isTrigger = false;
 
         //el arma con las mismas fuerzas que el jugador 
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
 
         //da fuerza al arma para tirarla
-        rb.AddForce(fpsCam.forward * dropForwardForce, ForceMode.Impulse);
-        rb.AddForce(fpsCam.up * dropUpwardForce, ForceMode.Impulse);
+        rb.AddForce(MainCam.forward * dropForwardForce, ForceMode.Impulse);
+        rb.AddForce(MainCam.up * dropUpwardForce, ForceMode.Impulse);
 
         //agrega una rotacion random
         float random = Random.Range(-1f, 1f);
         rb.AddTorque(new Vector3(random, random, random) * 10);
 
-        //desactiva el script del objeto
-        objectScript.enabled = false;
+        Objeto.drop = true;
+       
     }
+
+
 }

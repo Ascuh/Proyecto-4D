@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Objeto : MonoBehaviour
 {
+    public static bool drop = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,13 @@ public class Objeto : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle") && drop)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
