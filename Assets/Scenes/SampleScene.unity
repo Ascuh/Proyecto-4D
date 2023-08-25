@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 45.4
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 140db9471c7247f41afb98f209661818, type: 2}
 --- !u!1001 &18593558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,8 +135,16 @@ PrefabInstance:
       value: pinoEscenaUnity (26)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -216,7 +224,7 @@ Transform:
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &76623616
 MonoBehaviour:
@@ -5211,7 +5219,7 @@ Transform:
   m_Children:
   - {fileID: 2084677991}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &243290452
 MonoBehaviour:
@@ -5262,8 +5270,16 @@ PrefabInstance:
       value: pinoEscenaUnity (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -5323,7 +5339,7 @@ GameObject:
   - component: {fileID: 281002282}
   m_Layer: 6
   m_Name: Orientation
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5392,7 +5408,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317899800}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ff53c36f10226c14b97803c0943f417f, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 1c67aacf2d62ae94fa8a9ee289669e30, type: 2}
   m_EnableTreeColliders: 1
@@ -5443,7 +5459,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &324811971
 PrefabInstance:
@@ -5457,8 +5473,16 @@ PrefabInstance:
       value: pinoEscenaUnity (16)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -5668,7 +5692,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &409206996 stripped
 GameObject:
@@ -5737,8 +5761,16 @@ PrefabInstance:
       value: pinoEscenaUnity (20)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -5823,8 +5855,16 @@ PrefabInstance:
       value: pinoEscenaUnity (24)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -5885,8 +5925,16 @@ PrefabInstance:
       value: pinoEscenaUnity (32)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -5947,8 +5995,16 @@ PrefabInstance:
       value: pinoEscenaUnity (21)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6009,8 +6065,16 @@ PrefabInstance:
       value: pinoEscenaUnity (11)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6071,8 +6135,16 @@ PrefabInstance:
       value: pinoEscenaUnity (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6251,8 +6323,16 @@ PrefabInstance:
       value: pinoEscenaUnity (19)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6313,8 +6393,16 @@ PrefabInstance:
       value: pinoEscenaUnity (22)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6375,8 +6463,16 @@ PrefabInstance:
       value: pinoEscenaUnity (18)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6539,8 +6635,16 @@ PrefabInstance:
       value: pinoEscenaUnity (14)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6625,8 +6729,16 @@ PrefabInstance:
       value: pinoEscenaUnity (13)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6735,8 +6847,16 @@ PrefabInstance:
       value: pinoEscenaUnity (4)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6797,8 +6917,16 @@ PrefabInstance:
       value: pinoEscenaUnity (7)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -6913,7 +7041,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051046058 stripped
 GameObject:
@@ -6964,10 +7092,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076523722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2036825753}
   m_Father: {fileID: 963194228}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7045,8 +7174,16 @@ PrefabInstance:
       value: pinoEscenaUnity (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -7107,8 +7244,16 @@ PrefabInstance:
       value: pinoEscenaUnity (29)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -7169,8 +7314,16 @@ PrefabInstance:
       value: pinoEscenaUnity (15)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -7252,7 +7405,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9b4f7b2fa88739b4e8ee6443a9a48f0c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9b4f7b2fa88739b4e8ee6443a9a48f0c, type: 3}
       propertyPath: m_LocalScale.x
@@ -7321,7 +7474,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4ce21a397f71abb44aafe126311237ab, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ce21a397f71abb44aafe126311237ab, type: 3}
       propertyPath: m_LocalScale.x
@@ -7397,8 +7550,16 @@ PrefabInstance:
       value: pinoEscenaUnity (12)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -7459,8 +7620,16 @@ PrefabInstance:
       value: pinoEscenaUnity (28)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -7521,8 +7690,16 @@ PrefabInstance:
       value: pinoEscenaUnity (8)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -7604,7 +7781,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3db6a3d8b6b353b4d9292d7bb7e6f76c, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3db6a3d8b6b353b4d9292d7bb7e6f76c, type: 3}
       propertyPath: m_LocalScale.x
@@ -7701,7 +7878,7 @@ GameObject:
   - component: {fileID: 1426586243}
   m_Layer: 6
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7878,7 +8055,7 @@ GameObject:
   - component: {fileID: 1574544533}
   m_Layer: 6
   m_Name: CameraPos
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7910,8 +8087,16 @@ PrefabInstance:
       value: pinoEscenaUnity (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -7996,8 +8181,16 @@ PrefabInstance:
       value: pinoEscenaUnity (17)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -8058,8 +8251,16 @@ PrefabInstance:
       value: pinoEscenaUnity (25)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -8120,8 +8321,16 @@ PrefabInstance:
       value: pinoEscenaUnity (5)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -8230,8 +8439,16 @@ PrefabInstance:
       value: pinoEscenaUnity (23)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -8292,8 +8509,16 @@ PrefabInstance:
       value: pinoEscenaUnity (31)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -8378,8 +8603,16 @@ PrefabInstance:
       value: pinoEscenaUnity (27)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -8440,8 +8673,16 @@ PrefabInstance:
       value: pinoEscenaUnity (30)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -8525,7 +8766,7 @@ GameObject:
   - component: {fileID: 1967915429}
   m_Layer: 0
   m_Name: arboles
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8576,8 +8817,85 @@ Transform:
   - {fileID: 2049509169}
   - {fileID: 1442341058}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1987428810
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4189977098759058257, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_Name
+      value: Monstruo 1 Sin Modelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058262, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2144205203}
+    - target: {fileID: 4189977098759058262, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058262, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058262, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 257
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 42.162098
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.5130935
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.143017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058264, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189977098759058265, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
+      propertyPath: m_WalkableMask
+      value: 4294967295
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: baac079bb1b40d14e83dbc6c576feb87, type: 3}
 --- !u!1 &2017905732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
@@ -8602,6 +8920,51 @@ CapsuleCollider:
   m_Height: 29.61793
   m_Direction: 1
   m_Center: {x: 0.20719129, y: 13.697092, z: 0.029507326}
+--- !u!1 &2036825752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2036825753}
+  - component: {fileID: 2036825754}
+  m_Layer: 6
+  m_Name: lightDetect
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2036825753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036825752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1076523723}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2036825754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036825752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2049509168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
@@ -13626,8 +13989,16 @@ PrefabInstance:
       value: pinoEscenaUnity (9)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -13688,8 +14059,16 @@ PrefabInstance:
       value: pinoEscenaUnity (10)
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder
@@ -13790,7 +14169,7 @@ Transform:
   - {fileID: 281002282}
   - {fileID: 1574544533}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2144205207
 MonoBehaviour:
@@ -13835,6 +14214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashlight: {fileID: 1076523722}
+  lightDetect: {fileID: 2036825752}
 --- !u!136 &2144205210
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13885,8 +14265,16 @@ PrefabInstance:
       value: pinoEscenaUnity
       objectReference: {fileID: 0}
     - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597594512225339006, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226322076994526404, guid: e0ef6e0f7f103f44989890870550dd77, type: 3}
       propertyPath: m_RootOrder

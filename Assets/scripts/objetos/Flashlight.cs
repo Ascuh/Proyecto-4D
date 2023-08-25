@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     public GameObject flashlight;
-
+    public GameObject lightDetect;
     bool on;
 
     // Start is called before the first frame update
@@ -22,9 +22,16 @@ public class Flashlight : MonoBehaviour
         {
             flashlight.SetActive(true);
             on = true;
+
+
+            RaycastHit HitInfo;
+            if (Physics.Raycast(flashlight.transform.position, flashlight.transform.forward, out HitInfo))
+            {
+                lightDetect.transform.position = (HitInfo.point);
+            }
         }
         else if (on && Input.GetKeyDown(KeyCode.F))
-        {
+        {   
             flashlight.SetActive(false);
             on = false;
         }
