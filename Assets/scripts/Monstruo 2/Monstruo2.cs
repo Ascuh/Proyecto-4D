@@ -1,60 +1,104 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.AI;
 
-public class Monstruo2 : MonoBehaviour
-{
-    public GameObject player;
-    NavMeshAgent agent;
-    [SerializeField] LayerMask groundLayer, playerLayer, obstacleLayer;
-
-    float timer;
-    Vector3 destPoint;
-    [SerializeField] float range;
-    [SerializeField]List<Transform> targets = new List<Transform>();
-
-    void Start()
+    public class Monstruo2 : MonoBehaviour
     {
-        agent = GetComponent<NavMeshAgent>();
-    }
+        bool walkPointSet;
+        [SerializeField]bool patrol = true;
 
-    void Update()
-    {
-        timer += Time.deltaTime;
+        public GameObject player;
+        NavMeshAgent agent;
+        [SerializeField] LayerMask groundLayer, playerLayer, obstacleLayer;
 
-        if (timer >= 3)
+        float timer;
+        Vector3 destPoint;
+        [SerializeField] float range;
+        [SerializeField]List<Transform> targets = new List<Transform>();
+
+        void Start()
         {
-            Debug.Log("Adding Waypoint");
-            AddWaypoint(player.transform.position); 
-            timer = 0;
+            agent = GetComponent<NavMeshAgent>();
         }
-
-        if (targets.Count > 0)
+        private void FixedUpdate()
         {
-            destPoint = targets[0].position;
+            timer += Time.deltaTime;
+            print(timer);
 
-            if (Vector3.Distance(transform.position, destPoint) < 20)
+            if (timer >= 3)
             {
-                print("Moving to: " + destPoint);
-                agent.SetDestination(destPoint);
-                targets.RemoveAt(0);
-
-                if (targets.Count > 0)
-                {
-                    destPoint = targets[0].position;
-                }
+                Debug.Log("Adding Waypoint");
+                AddWaypoint(player.transform.position);
+                timer = 0;
             }
         }
+        void Update()
+        {
+
+
+            if (patrol)
+                Patrol();
+
+            if (Vector3.Distance(transform.position, targets[0].position) < 5)
+            {
+                patrol = false;
+            }
+
+
+            if (!patrol)
+                Chase();
+
+        if (targets.Count > 5)
+            targets.RemoveAt(0);
     }
 
-    public void AddWaypoint(Vector3 waypointPosition)
-    {
-        while (targets.Count > 0 && targets[0].position != waypointPosition)
+        public void AddWaypoint(Vector3 waypointPosition)
         {
-            targets.RemoveAt(0);
+
+            targets.Add(player.transform);
         }
 
-        targets.Add(player.transform);
+        void Patrol()
+        {
+            if (!walkPointSet)
+            {
+                SearchForDest();
+            }
+
+            if (walkPointSet)
+            {
+                agent.SetDestination(destPoint);
+            }
+
+            if (Vector3.Distance(transform.position, destPoint) < 10)
+            {
+                walkPointSet = false;
+            }
+        }
+
+        void Chase()
+        {
+            print("Moving to: " + destPoint);
+            agent.SetDestination(destPoint);
+
+            if (targets.Count > 0)
+            {
+                destPoint = targets[0].position;
+            }
+
     }
-}
+
+        void SearchForDest()
+        {
+            float z = Random.Range(range, -range);
+            float x = Random.Range(range, -range);
+            destPoint = new Vector3(transform.position.x + x, transform.position.y, transform.position.z + z);
+
+            if (Physics.Raycast(destPoint, Vector3.down, groundLayer))
+            {
+                walkPointSet = true;
+            }
+        }
+
+    }
