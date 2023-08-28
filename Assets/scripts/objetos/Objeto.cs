@@ -7,6 +7,7 @@ public class Objeto : MonoBehaviour
 {
     public static bool drop = false;
     MeshRenderer meshrenderer;
+    public GameObject objeto2d;
 
 
     // Start is called before the first frame update
@@ -31,11 +32,13 @@ public class Objeto : MonoBehaviour
 
     public void Agarro()
     {
+        objeto2d.SetActive(true);
         meshrenderer.enabled = false;
     }
 
     public void Solto()
     {
+        objeto2d.SetActive(false);
         meshrenderer.enabled = true;
     }
 
