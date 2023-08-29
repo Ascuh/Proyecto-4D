@@ -42,7 +42,7 @@ public class AgarrarObjetos : MonoBehaviour
 
         //se fija si el jugador esta en el rango y si la "e" esta apretada
         Vector3 distanceToPlayer = player.position - transform.position;
-        if(!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull)
+        if(!equipped && RaycastCam.tocando && Input.GetKeyDown(KeyCode.E) && !slotFull)
         {
             PickUp();
         }
