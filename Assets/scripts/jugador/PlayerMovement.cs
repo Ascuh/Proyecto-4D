@@ -205,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void nCollisionExit(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("deny"))
         {

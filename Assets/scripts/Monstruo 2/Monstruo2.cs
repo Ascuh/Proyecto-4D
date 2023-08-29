@@ -97,6 +97,10 @@
     {
         if (targets.Count > 0 && targetIndex >= 0 && targetIndex < targets.Count)
         {
+            if(Vector3.Distance(transform.position, targets[targetIndex]) > 20)
+            {
+                targets.RemoveAt(targetIndex);   
+            }
             Vector3 destPoint = targets[targetIndex];
             agent.SetDestination(destPoint);
             print("Moving to: " + destPoint);

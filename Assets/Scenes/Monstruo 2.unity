@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 1597355896}
   m_Layer: 0
   m_Name: barro
-  m_TagString: Untagged
+  m_TagString: deny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -599,6 +599,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2152080889473298123, guid: ddb8b790be819b042907a51020eacff3, type: 3}
+      propertyPath: m_Speed
+      value: 6.07
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2152080889473298117, guid: ddb8b790be819b042907a51020eacff3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ddb8b790be819b042907a51020eacff3, type: 3}
@@ -609,6 +613,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6909186220099689677, guid: ce2408d0dfefd2e47b1f8ccb8793e72f, type: 3}
+      propertyPath: mon2
+      value: 
+      objectReference: {fileID: 338333964}
     - target: {fileID: 6909186220105876100, guid: ce2408d0dfefd2e47b1f8ccb8793e72f, type: 3}
       propertyPath: m_RootOrder
       value: 1
