@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     public float crouchYScale;
     private float startYscale;
 
-
+    public Monstruo2 mon2;
 
     // Start is called before the first frame update
     void Start()
@@ -194,5 +194,27 @@ public class PlayerMovement : MonoBehaviour
     private void resetJump()
     {
         readyToJump = true;
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("deny"))
+        {
+            mon2.deny = true;
+        }
+    }
+
+    private void nCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("deny"))
+        {
+            Invoke("DenyFalse", 10);
+        }
+    }
+
+    private void DenyFalse()
+    {
+        mon2.deny = false;
     }
 }
