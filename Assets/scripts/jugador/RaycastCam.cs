@@ -13,6 +13,8 @@ public class RaycastCam : MonoBehaviour
 
     public static bool tocandoLlave;
 
+    public static bool tocandoCand;
+
     bool tocandoPuerta;
     bool abierta;
 
@@ -54,7 +56,15 @@ public class RaycastCam : MonoBehaviour
             tocandoLlave = false;
         }
 
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Candado")))
+        {
+            tocandoCand = true;
+        }
 
+        else
+        {
+            tocandoCand = false;
+        }
 
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Puerta")))
         {
