@@ -9,7 +9,13 @@ public class RaycastCam : MonoBehaviour
 
     public float DistanciaRay;
 
-    public static bool tocando;
+    public static bool tocandoObj;
+
+    bool tocandoPuerta;
+    bool abierta;
+
+    public Animator Puerta;
+    public GameObject texto;
 
     // Start is called before the first frame update
     void Start()
@@ -28,19 +34,50 @@ public class RaycastCam : MonoBehaviour
         // se fija si hay un objeto con la layer "Objeto" tocando el raycast (delante de la camara)
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Objeto")))
         {
-            tocando = true;
+            tocandoObj = true;
         }   
         
-           
-        
+        else
+        {
+            tocandoObj = false;
+        }
+
+
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Puerta")))
+        {
+            texto.SetActive(true);
+            tocandoPuerta = true;
+        }
 
         else
         {
-            tocando = false;
+            texto.SetActive(false);
+            tocandoPuerta = false;
         }
 
-            
+        if (tocandoPuerta && Input.GetKeyDown(KeyCode.E) &&!abierta)
+        {
+            abierta = true;
+            Puerta.SetBool("abierto", true);
+            Puerta.SetBool("cerrado", false);
+        }
+        else if (tocandoPuerta && Input.GetKeyDown(KeyCode.E) && abierta)
+        {
+            abierta = false;
+            Puerta.SetBool("abierto", false);
+            Puerta.SetBool("cerrado", true);
+        }
 
 
+    }
+    void abrir()
+    {
+        Puerta.SetBool("abierto", true);
+        Puerta.SetBool("cerrado", false);
+    }
+    void cerrar()
+    {
+        Puerta.SetBool("abierto", false);
+        Puerta.SetBool("cerrado", true);
     }
 }
