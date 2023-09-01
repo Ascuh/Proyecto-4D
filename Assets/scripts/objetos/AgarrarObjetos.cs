@@ -48,7 +48,7 @@ public class AgarrarObjetos : MonoBehaviour
         }
 
         //si el arma esta equipada y se aprieta la "q"
-        if(equipped && Input.GetKeyDown(KeyCode.Q))
+        if (equipped && Input.GetKeyDown(KeyCode.Q))
         {
             Drop();
         }
@@ -100,6 +100,7 @@ public class AgarrarObjetos : MonoBehaviour
 
         objeto.Solto();
     }
+
 
 
 }
