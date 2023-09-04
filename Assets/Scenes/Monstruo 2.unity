@@ -123,17 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 2c96b041ec64b4543a368bee07aca9e0, type: 2}
---- !u!114 &338333964 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2550025483773108882, guid: ddb8b790be819b042907a51020eacff3, type: 3}
+--- !u!1 &338333955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2152080889473298115, guid: ddb8b790be819b042907a51020eacff3, type: 3}
   m_PrefabInstance: {fileID: 2152080889270304704}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &338333964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338333955}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65421631856d3c44ba6b862f8e61ac94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrol: 1
+  deny: 0
+  player: {fileID: 1996956334}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 257
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  range: 15
+  targets: []
 --- !u!1 &633837391
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,10 +599,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2550025483773108882, guid: ddb8b790be819b042907a51020eacff3, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1996956334}
+    - target: {fileID: 2152080889473298123, guid: ddb8b790be819b042907a51020eacff3, type: 3}
+      propertyPath: m_Speed
+      value: 6.07
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2152080889473298117, guid: ddb8b790be819b042907a51020eacff3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ddb8b790be819b042907a51020eacff3, type: 3}
