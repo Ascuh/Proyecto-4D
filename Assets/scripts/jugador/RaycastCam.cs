@@ -15,16 +15,14 @@ public class RaycastCam : MonoBehaviour
 
     public static bool tocandoCand;
 
-    bool tocandoPuerta;
-    bool abierta;
+    public static bool tocandoPuerta;
 
-    public Animator Puerta;
-    public GameObject texto;
+    public GameObject textoPuerta;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -68,39 +66,16 @@ public class RaycastCam : MonoBehaviour
 
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Puerta")))
         {
-            texto.SetActive(true);
-            tocandoPuerta = true;
+            textoPuerta.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+            toco.collider.gameObject.GetComponent<Puerta>().Interactuar();
+            }
         }
-
         else
         {
-            texto.SetActive(false);
-            tocandoPuerta = false;
+            textoPuerta.SetActive(true);
         }
-
-        if (tocandoPuerta && Input.GetKeyDown(KeyCode.E) &&!abierta)
-        {
-            abierta = true;
-            Puerta.SetBool("abierto", true);
-            Puerta.SetBool("cerrado", false);
-        }
-        else if (tocandoPuerta && Input.GetKeyDown(KeyCode.E) && abierta)
-        {
-            abierta = false;
-            Puerta.SetBool("abierto", false);
-            Puerta.SetBool("cerrado", true);
-        }
-
-
     }
-    void abrir()
-    {
-        Puerta.SetBool("abierto", true);
-        Puerta.SetBool("cerrado", false);
-    }
-    void cerrar()
-    {
-        Puerta.SetBool("abierto", false);
-        Puerta.SetBool("cerrado", true);
-    }
+
 }

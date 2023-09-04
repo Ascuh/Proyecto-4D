@@ -2,28 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class puerta : MonoBehaviour
+public class Puerta : MonoBehaviour
 {
 
-    public Animator Puerta;
-    public static GameObject texto;
+    public bool abierta;
 
-    private void Start()
+    public Animator animPuerta;
+
+    void Start()
     {
-        
-    }
-    public void abrir()
-    {
-        Puerta.SetBool("abierto", true);
-        Puerta.SetBool("cerrado", false);
+        animPuerta = GetComponent<Animator>();
     }
 
-    public void cerrar()
+    void Update()
     {
-        Puerta.SetBool("abierto", false);
-        Puerta.SetBool("cerrado", true);
+
     }
-    
-
-
+   public void Interactuar()
+   {
+          if (abierta)
+          {
+              abierta = false;
+              animPuerta.SetBool("abierto", false);
+              animPuerta.SetBool("cerrado", true);
+          }
+          else
+          {
+              abierta = true;
+              animPuerta.SetBool("abierto", true);
+              animPuerta.SetBool("cerrado", false);
+          }
+   }
 }

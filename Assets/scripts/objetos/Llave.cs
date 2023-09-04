@@ -7,6 +7,8 @@ public class Llave : MonoBehaviour
 {
     MeshRenderer meshrenderer;
     public GameObject Llave2d;
+    public static bool llave1 = false;
+
 
     private void Start()
     {
@@ -14,12 +16,14 @@ public class Llave : MonoBehaviour
     }
     public void Agarro()
     {
+        llave1 = true;
         Llave2d.SetActive(true);
         meshrenderer.enabled = false;
     }
 
     public void Solto()
     {
+        llave1 = false;
         Llave2d.SetActive(false);
         meshrenderer.enabled = true;
     }
