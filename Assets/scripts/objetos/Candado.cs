@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Candado : MonoBehaviour
 {
-    public static bool Candado1 = false;
+    public static bool Candado1 = true;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class Candado : MonoBehaviour
     {
         if(Llave.llave1 && RaycastCam.tocandoCand && Input.GetMouseButtonDown(0))
         {
-            Candado1 = true;
+            Candado1 = false;
             Destroy(gameObject);
         }
     }

@@ -18,6 +18,7 @@ public class RaycastCam : MonoBehaviour
     public static bool tocandoPuerta;
 
     public GameObject textoPuerta;
+    public GameObject puertaBloqueada;
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +76,28 @@ public class RaycastCam : MonoBehaviour
         else
         {
             textoPuerta.SetActive(false);
+        }
+
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("PuertaCand")))
+        {
+            if (!Candado.Candado1)
+            {
+            puertaBloqueada.SetActive(false);
+            }
+            else
+            {
+            puertaBloqueada.SetActive(true);
+            }
+
+            if (Input.GetKeyDown(KeyCode.E) && !Candado.Candado1)
+            {
+                toco.collider.gameObject.GetComponent<Puerta>().Interactuar();
+            }
+
+        }
+        else
+        {
+            puertaBloqueada.SetActive(false);
         }
     }
 
