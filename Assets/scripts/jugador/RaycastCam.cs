@@ -74,7 +74,7 @@ public class RaycastCam : MonoBehaviour
         }
         else
         {
-            textoPuerta.SetActive(true);
+            textoPuerta.SetActive(false);
         }
     }
 
