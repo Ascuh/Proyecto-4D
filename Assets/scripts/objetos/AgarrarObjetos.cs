@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class AgarrarObjetos : MonoBehaviour
 {
-    public Rigidbody rb;
-    public BoxCollider coll;
+    Rigidbody rb;
+    BoxCollider coll;
     public Transform player, ObjectContainer, MainCam;
 
     public float pickUpRange;
@@ -20,7 +20,8 @@ public class AgarrarObjetos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
+        rb = GetComponent<Rigidbody>();
+        coll = GetComponent<BoxCollider>();
 
         if (!equipped)
         {

@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class PuertaCand : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public bool abierta;
+
+    public Animator animPuerta;
+
     void Start()
     {
-        
+        animPuerta = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    public void Interactuar()
+    {
+        if (abierta)
+        {
+            abierta = false;
+            animPuerta.SetBool("abierto", false);
+            animPuerta.SetBool("cerrado", true);
+        }
+        else
+        {
+            abierta = true;
+            animPuerta.SetBool("abierto", true);
+            animPuerta.SetBool("cerrado", false);
+        }
     }
 }

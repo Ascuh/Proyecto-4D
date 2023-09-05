@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class RaycastCam : MonoBehaviour
@@ -33,6 +34,15 @@ public class RaycastCam : MonoBehaviour
         Debug.DrawRay(Camara.position, Camara.forward * DistanciaRay, Color.red);
 
         RaycastHit toco;
+
+        if(Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay))
+        {
+            // Verificar si el rayo impactó en un objeto
+            GameObject hitObject = toco.collider.gameObject;
+
+            // Obtener el nombre del objeto
+            string objectName = hitObject.name;
+        }
 
         // se fija si hay un objeto con la layer "Objeto" tocando el raycast (delante de la camara)
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Objeto")))
