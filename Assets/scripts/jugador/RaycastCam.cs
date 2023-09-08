@@ -24,6 +24,10 @@ public class RaycastCam : MonoBehaviour
 
     string objectName;
 
+    bool Candado1 = true;
+    bool Candado2 = true;
+    bool Candado3 = true;
+
 
     public GameObject textoPuerta;
     public GameObject puertaBloqueada;
@@ -110,6 +114,21 @@ public class RaycastCam : MonoBehaviour
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Candado")))
         {
             tocandoCand = true;
+            if (Llave.llave1 && tocandoCand && Input.GetMouseButtonDown(0) && objectName == "candado1")
+            {
+                toco.collider.gameObject.GetComponent<Candado>().candado();
+                Candado1 = false;
+            }
+            if (Llave.llave2 && tocandoCand && Input.GetMouseButtonDown(0) && objectName == "candado2")
+            {
+                toco.collider.gameObject.GetComponent<Candado>().candado();
+                Candado2 = false;
+            }
+            if (Llave.llave3 && tocandoCand && Input.GetMouseButtonDown(0) && objectName == "candado3")
+            {
+                toco.collider.gameObject.GetComponent<Candado>().candado();
+                Candado3 = false;
+            }
         }
 
         else
@@ -134,18 +153,17 @@ public class RaycastCam : MonoBehaviour
         //script de la puerta con candado
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("PuertaCand")))
         {
-            if (!Candado.Candado1)
+            if (!Candado1 && !Candado2 && !Candado3)
             {
             puertaBloqueada.SetActive(false);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    toco.collider.gameObject.GetComponent<Puerta>().Interactuar();
+                }
             }
             else
             {
             puertaBloqueada.SetActive(true);
-            }
-
-            if (Input.GetKeyDown(KeyCode.E) && !Candado.Candado1)
-            {
-                toco.collider.gameObject.GetComponent<Puerta>().Interactuar();
             }
 
         }
