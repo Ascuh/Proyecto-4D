@@ -9,7 +9,9 @@ public class Llave : MonoBehaviour
 
     public GameObject Llave2d;
 
-    public static bool llave = false;
+    public static bool llave1 = false;
+    public static bool llave2 = false;
+    public static bool llave3 = false;
 
     Rigidbody rb;
     BoxCollider coll;
@@ -17,12 +19,12 @@ public class Llave : MonoBehaviour
 
     public float dropForwardForce, dropUpwardForce;
 
-    bool equipped;
+    public static bool equipped;
     public static bool slotFull;
 
     private void Start()
     {
-     meshrenderer = GetComponent<MeshRenderer>();
+        meshrenderer = GetComponent<MeshRenderer>();
 
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<BoxCollider>();
@@ -42,36 +44,8 @@ public class Llave : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        //se fija si el jugador esta en el rango y si la "e" esta apretada
-        Vector3 distanceToPlayer = player.position - transform.position;
-        if (!equipped && RaycastCam.tocandoLlave && Input.GetKeyDown(KeyCode.E) && !slotFull)
-        {
-            PickUp();
-        }
 
-        //si el arma esta equipada y se aprieta la "q"
-        if (equipped && Input.GetKeyDown(KeyCode.Q))
-        {
-            Drop();
-        }
-    }
-    public void Agarrollave()
-    {
-        llave = true;
-        Llave2d.SetActive(true);
-        meshrenderer.enabled = false;
-    }
-
-    public void Soltollave()
-    {
-        llave = false;
-        Llave2d.SetActive(false);
-        meshrenderer.enabled = true;
-    }
-
-    private void PickUp()
+    public void PickUp()
     {
         equipped = true;
         slotFull = true;
@@ -85,11 +59,12 @@ public class Llave : MonoBehaviour
         rb.isKinematic = true;
         coll.isTrigger = true;
 
-        Agarrollave();
+        Llave2d.SetActive(true);
+        meshrenderer.enabled = false;
 
     }
 
-    private void Drop()
+    public void Drop()
     {
         equipped = false;
         slotFull = false;
@@ -112,7 +87,8 @@ public class Llave : MonoBehaviour
         float random = Random.Range(-1f, 1f);
         rb.AddTorque(new Vector3(random, random, random) * 10);
 
-        Soltollave();
+        Llave2d.SetActive(false);
+        meshrenderer.enabled = true;
     }
 }
 

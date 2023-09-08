@@ -13,6 +13,7 @@ public class Objeto : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         meshrenderer = GetComponent<MeshRenderer>();
     }
 

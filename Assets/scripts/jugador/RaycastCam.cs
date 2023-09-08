@@ -18,13 +18,20 @@ public class RaycastCam : MonoBehaviour
 
     public static bool tocandoPuerta;
 
+    public Llave llave1;
+    public Llave llave2;
+    public Llave llave3;
+
+    string objectName;
+
+
     public GameObject textoPuerta;
     public GameObject puertaBloqueada;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+     ;
     }
 
     // Update is called once per frame
@@ -41,7 +48,7 @@ public class RaycastCam : MonoBehaviour
             GameObject hitObject = toco.collider.gameObject;
 
             // Obtener el nombre del objeto
-            string objectName = hitObject.name;
+            objectName = hitObject.name;
         }
 
         // se fija si hay un objeto con la layer "Objeto" tocando el raycast (delante de la camara)
@@ -55,9 +62,30 @@ public class RaycastCam : MonoBehaviour
             tocandoObj = false;
         }
 
+        //script de las 3 llaves
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Llave")))
         {
             tocandoLlave = true;
+            if (!Llave.equipped && tocandoLlave && Input.GetKeyDown(KeyCode.E) && !Llave.slotFull)
+            {
+                if (objectName == "llave1")
+                {
+                    llave1.PickUp();
+                    Llave.llave1 = true;
+                }
+                    
+                else if (objectName == "llave2")
+                {
+                    llave2.PickUp();
+                    Llave.llave2 = true;
+                }
+
+                else if (objectName == "llave3")
+                {
+                    llave3.PickUp();
+                    Llave.llave3 = true;
+                }
+            }
         }
 
         else
@@ -65,6 +93,20 @@ public class RaycastCam : MonoBehaviour
             tocandoLlave = false;
         }
 
+        if (Llave.llave1 && Input.GetKeyDown(KeyCode.Q))
+        {
+            llave1.Drop();
+        }
+        if (Llave.llave2 && Input.GetKeyDown(KeyCode.Q))
+        {
+            llave2.Drop();
+        }
+        if (Llave.llave3 && Input.GetKeyDown(KeyCode.Q))
+        {
+            llave3.Drop();
+        }
+
+        //script del candado
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Candado")))
         {
             tocandoCand = true;
@@ -75,6 +117,7 @@ public class RaycastCam : MonoBehaviour
             tocandoCand = false;
         }
 
+        //script de las puertas
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Puerta")))
         {
             textoPuerta.SetActive(true);
@@ -88,6 +131,7 @@ public class RaycastCam : MonoBehaviour
             textoPuerta.SetActive(false);
         }
 
+        //script de la puerta con candado
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("PuertaCand")))
         {
             if (!Candado.Candado1)
@@ -110,5 +154,4 @@ public class RaycastCam : MonoBehaviour
             puertaBloqueada.SetActive(false);
         }
     }
-
 }
