@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 3ccafea8d96dc3d46a7a98da668bb2e7
+guid: 624c8a2bf26ac2d479718145ff4ad6d8
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: a37f544d4d02f374f9e98c6ff5c6287c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 2f389de1504753f48ac2d59bd6f937c2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -33,9 +43,9 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: jumpscare balazo|ArmatureAction
-      takeName: jumpscare balazo|ArmatureAction
-      internalID: -944009251428414501
+      name: caminar|ArmatureAction
+      takeName: caminar|ArmatureAction
+      internalID: -9215896539746526070
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -62,9 +72,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: jumpscare balazo|ArmatureAction.004
-      takeName: jumpscare balazo|ArmatureAction.004
-      internalID: 6913942752961320595
+      name: caminar|ArmatureAction.004
+      takeName: caminar|ArmatureAction.004
+      internalID: -3838619327894583673
       firstFrame: 0
       lastFrame: 16
       wrapMode: 0
@@ -73,7 +83,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -91,9 +101,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: jumpscare balazo|jumpscareAction
-      takeName: jumpscare balazo|jumpscareAction
-      internalID: -6346649773891173131
+      name: caminar|jumpscareAction
+      takeName: caminar|jumpscareAction
+      internalID: 1833260171399976929
       firstFrame: 0
       lastFrame: 51
       wrapMode: 0
@@ -102,7 +112,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -120,18 +130,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: jumpscare balazo|jumpscareAction.010
-      takeName: jumpscare balazo|jumpscareAction.010
-      internalID: 5751383864407959478
+      name: caminar|jumpscareAction.010
+      takeName: caminar|jumpscareAction.010
+      internalID: 8381358525381182562
       firstFrame: 0
-      lastFrame: 34
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -149,9 +159,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: jumpscare balazo|Plane.002Action
-      takeName: jumpscare balazo|Plane.002Action
-      internalID: 1674155975240749013
+      name: caminar|Plane.002Action
+      takeName: caminar|Plane.002Action
+      internalID: 1784094633349147198
       firstFrame: 0
       lastFrame: 15
       wrapMode: 0
@@ -160,7 +170,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
