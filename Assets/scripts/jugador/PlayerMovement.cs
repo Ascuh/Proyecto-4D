@@ -48,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Monstruo2 mon2;
 
+    public bool life = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -216,5 +218,10 @@ public class PlayerMovement : MonoBehaviour
     private void DenyFalse()
     {
         mon2.deny = false;
+    }
+
+    public void die()
+    {
+        Destroy(gameObject);
     }
 }

@@ -8,6 +8,8 @@ public class Monstruo1 : MonoBehaviour
     public GameObject player;
     NavMeshAgent agent;
     [SerializeField]LayerMask groundLayer, playerLayer, obstacleLayer;
+    PlayerMovement playerMovement;
+
 
     Vector3 destPoint;
     bool walkPointSet;
@@ -17,9 +19,13 @@ public class Monstruo1 : MonoBehaviour
     [SerializeField] bool inSight = false;
     [SerializeField] bool inRange = false;
 
+    [SerializeField ]Animator anim;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        playerMovement = FindObjectOfType<PlayerMovement>().gameObject.GetComponent<PlayerMovement>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -65,7 +71,21 @@ public class Monstruo1 : MonoBehaviour
 
     void Attack()
     {
-
+        if (playerMovement.life)
+        {
+            anim.SetBool("attack", true);
+            anim.SetBool("kill", false);
+            agent.speed = 0;
+            Invoke("resetSpeed", 3);
+        }
+         else
+        {
+            anim.SetBool("kill", true);
+            anim.SetBool("attack", false);
+            agent.speed = 0;
+            playerMovement.die();
+            Invoke("resetSpeed", 3);
+         }
     }
 
     void SearchForDest()
@@ -78,6 +98,14 @@ public class Monstruo1 : MonoBehaviour
         {
             walkPointSet = true;
         }
+    }
+
+    void resetSpeed()
+    {
+        agent.speed = 3.5f;
+        playerMovement.life = false;
+        anim.SetBool("attack", false);
+        anim.SetBool("kill", false);
     }
 
 }
