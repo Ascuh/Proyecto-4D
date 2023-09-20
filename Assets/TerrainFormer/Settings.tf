@@ -20,7 +20,7 @@
                 "invertFalloff": false,
                 "selectedBrushTab": "All",
                 "selectedBrushId": "_DefaultFalloffBrushName",
-                "brushSize": 8.0,
+                "brushSize": 4.0,
                 "brushSpeed": 0.10000000149011612,
                 "brushRoundness": 1.0,
                 "brushAngle": 0.0,
@@ -339,7 +339,7 @@
     "mouldToolRaycastTopDown": true,
     "mouldToolBoxFilterSize": 1,
     "mouldAllIterations": 5,
-    "targetOpacity": 1.0,
+    "targetOpacity": 0.5270000100135803,
     "selectedTextureIndex": 0,
     "mainDirectory": "Assets/TerrainFormer/"
 }
