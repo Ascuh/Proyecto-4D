@@ -34,8 +34,8 @@ public class PlayerCam : MonoBehaviour
 
         xRotation -= mouseY;
 
-        //para que la camara no se mueva mas de 90 grados para arriba ni 90 grados para abajo
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        //para que la camara no se mueva mas de 90 grados para arriba ni 80 grados para abajo
+        xRotation = Mathf.Clamp(xRotation, -90f, 80f);
 
         //rotate cam and orientation 
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
