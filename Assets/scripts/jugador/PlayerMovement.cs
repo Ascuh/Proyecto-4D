@@ -89,22 +89,22 @@ public class PlayerMovement : MonoBehaviour
                 moveSpeed = 4;
                 Running = false;
             }
+        }
 
-            if(!Running || tired)
+        if (!Running || tired)
+        {
+            if (stamina <= maxStamina)
             {
-                if (stamina <= maxStamina)
-                {
-                    stamina += staminaRegen * Time.deltaTime;
-                }
-            }
-            if (Running)
-            {
-                stamina -= staminaDrain * Time.deltaTime;
+                stamina += staminaRegen * Time.deltaTime;
             }
         }
-               
+        if (Running)
+        {
+            stamina -= staminaDrain * Time.deltaTime;
+        }
 
-            if(stamina <= 0)
+
+        if (stamina <= 0)
             {
                 tired = true;
             }
