@@ -19,6 +19,9 @@ public class Monstruo1 : MonoBehaviour
     [SerializeField] bool inSight = false;
     [SerializeField] bool inRange = false;
 
+    [SerializeField] Camera cam1;
+    [SerializeField] Camera cam2;
+
     [SerializeField ]Animator anim;
 
     void Start()
@@ -26,6 +29,7 @@ public class Monstruo1 : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         playerMovement = FindObjectOfType<PlayerMovement>().gameObject.GetComponent<PlayerMovement>();
         anim = GetComponent<Animator>();
+        cam2.enabled = false;
     }
 
     void Update()
@@ -73,13 +77,18 @@ public class Monstruo1 : MonoBehaviour
     {
         if (playerMovement.life)
         {
+            cam2.enabled = true;
+            cam1.enabled = false;
             anim.SetBool("attack", true);
             anim.SetBool("kill", false);
             agent.speed = 0;
+            Invoke("resetCams", 1);
             Invoke("resetSpeed", 3);
         }
          else
         {
+            cam2.enabled = true;
+            cam1.enabled = false;
             anim.SetBool("kill", true);
             anim.SetBool("attack", false);
             agent.speed = 0;
@@ -102,10 +111,24 @@ public class Monstruo1 : MonoBehaviour
 
     void resetSpeed()
     {
+        cam1.enabled = true;
+        cam2.enabled = false;
         agent.speed = 3.5f;
         playerMovement.life = false;
         anim.SetBool("attack", false);
         anim.SetBool("kill", false);
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+        float forceMagnitude = 10f;
+        player.GetComponent<Rigidbody>().AddForce(-direction * forceMagnitude, ForceMode.Impulse);
+    }
+
+    void resetCams()
+    {
+        cam1.enabled = true;
+        cam2.enabled = false;
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+        float forceMagnitude = 10f;
+        player.GetComponent<Rigidbody>().AddForce(-direction * forceMagnitude, ForceMode.Impulse);
     }
 
 }
