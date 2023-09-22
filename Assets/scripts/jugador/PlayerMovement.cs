@@ -81,12 +81,12 @@ public class PlayerMovement : MonoBehaviour
             else if (Input.GetKeyUp(KeyCode.LeftControl))
                 {
                     transform.localScale = new Vector3(transform.localScale.x, startYscale, transform.localScale.z);
-                    moveSpeed = 4;
+                    moveSpeed = 3;
                 }
 
             else if (Input.GetKeyUp(KeyCode.LeftShift)) 
             {
-                moveSpeed = 4;
+                moveSpeed = 3;
                 Running = false;
             }
         }
