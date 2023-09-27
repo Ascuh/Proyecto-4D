@@ -28,9 +28,13 @@ public class RaycastCam : MonoBehaviour
     bool Candado2 = true;
     bool Candado3 = true;
 
+    public Animator pantallaNegra;
 
+    public GameObject fuego;
     public GameObject textoPuerta;
     public GameObject puertaBloqueada;
+
+    public PlayerCam ScriptCam;
 
     // Start is called before the first frame update
     void Start()
@@ -171,5 +175,29 @@ public class RaycastCam : MonoBehaviour
         {
             puertaBloqueada.SetActive(false);
         }
+
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Fogata")))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                StartCoroutine(tiempo());
+            }
+        }
+
+        else
+        {
+         
+        }
+    }
+
+    IEnumerator tiempo()
+    {
+        pantallaNegra.SetBool("prendida", true);
+        ScriptCam.enabled = false;
+        yield return new WaitForSeconds(1);
+        fuego.SetActive(true);
+        yield return new WaitForSeconds(2);
+        pantallaNegra.SetBool("prendida", false);
+        ScriptCam.enabled = true;
     }
 }
