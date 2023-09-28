@@ -62,55 +62,60 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stamina >= -1)
+        if (RaycastCam.lastimado)
+            moveSpeed = 2;
+        else
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && !tired)
+            if (stamina >= -1)
             {
-                Running = true;
-                moveSpeed = 6;
-            }
+                if (Input.GetKeyDown(KeyCode.LeftShift) && !tired)
+                {
+                    Running = true;
+                    moveSpeed = 6;
+                }
 
-            else if (Input.GetKeyDown(KeyCode.LeftControl))
-            {
-                transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
-                rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
-                moveSpeed = crouchSpeed;
-            }
-            else if (Input.GetKeyUp(KeyCode.LeftControl))
+                else if (Input.GetKeyDown(KeyCode.LeftControl))
+                {
+                    transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+                    rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+                    moveSpeed = crouchSpeed;
+                }
+                else if (Input.GetKeyUp(KeyCode.LeftControl))
                 {
                     transform.localScale = new Vector3(transform.localScale.x, startYscale, transform.localScale.z);
                     moveSpeed = 3;
                 }
 
-            else if (Input.GetKeyUp(KeyCode.LeftShift)) 
-            {
-                moveSpeed = 3;
-                Running = false;
+                else if (Input.GetKeyUp(KeyCode.LeftShift))
+                {
+                    moveSpeed = 3;
+                    Running = false;
+                }
             }
-        }
 
-        if (!Running || tired)
-        {
-            if (stamina <= maxStamina)
+            if (!Running || tired)
             {
-                stamina += staminaRegen * Time.deltaTime;
+                if (stamina <= maxStamina)
+                {
+                    stamina += staminaRegen * Time.deltaTime;
+                }
             }
-        }
-        if (Running)
-        {
-            stamina -= staminaDrain * Time.deltaTime;
-        }
+            if (Running)
+            {
+                stamina -= staminaDrain * Time.deltaTime;
+            }
 
 
-        if (stamina <= 0)
+            if (stamina <= 0)
             {
                 tired = true;
             }
 
-            if (stamina >= 100) { 
+            if (stamina >= 100)
+            {
                 tired = false;
+            }
         }
-       
 
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
