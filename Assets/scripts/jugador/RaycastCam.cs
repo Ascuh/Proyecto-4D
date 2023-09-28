@@ -9,14 +9,12 @@ public class RaycastCam : MonoBehaviour
     public Transform Camara;
 
     public float DistanciaRay;
-
     public static bool tocandoObj;
-
     public static bool tocandoLlave;
-
     public static bool tocandoCand;
-
     public static bool tocandoPuerta;
+
+    bool fogPrendida;
 
     public Llave llave1;
     public Llave llave2;
@@ -29,10 +27,12 @@ public class RaycastCam : MonoBehaviour
     bool Candado3 = true;
 
     public Animator pantallaNegra;
+    public Animator sangre;
 
     public GameObject fuego;
     public GameObject textoPuerta;
     public GameObject puertaBloqueada;
+    public GameObject prenderFogata;
 
     public PlayerCam ScriptCam;
 
@@ -176,28 +176,50 @@ public class RaycastCam : MonoBehaviour
             puertaBloqueada.SetActive(false);
         }
 
+        //script de la fogata
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Fogata")))
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (!fogPrendida)
             {
-                StartCoroutine(tiempo());
+                prenderFogata.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    StartCoroutine(tiempoFogata());
+                }
             }
         }
 
         else
         {
-         
+            prenderFogata.SetActive(false);
         }
     }
 
-    IEnumerator tiempo()
+    IEnumerator tiempoFogata()
     {
         pantallaNegra.SetBool("prendida", true);
         ScriptCam.enabled = false;
         yield return new WaitForSeconds(1);
         fuego.SetActive(true);
+        fogPrendida = true;
+        prenderFogata.SetActive(false);
         yield return new WaitForSeconds(2);
         pantallaNegra.SetBool("prendida", false);
         ScriptCam.enabled = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Fogata") && fogPrendida)
+        {
+            StartCoroutine(tiempoSangre());
+        }
+    }
+
+    IEnumerator tiempoSangre()
+    {
+        sangre.SetBool("lastimado", true);
+        yield return new WaitForSeconds(5);
+        sangre.SetBool("lastimado", false);
     }
 }
