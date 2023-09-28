@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
 
     public float modificadorGravedad;
 
-    [Header("Stamina")]
     public float maxStamina;
     public float staminaDrain;
     public float staminaRegen;
@@ -41,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
     private bool tired;
     private bool Running;
 
-    [Header("Crouch")]
     public float crouchSpeed;
     public float crouchYScale;
     private float startYscale;
