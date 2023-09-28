@@ -10,6 +10,11 @@ public class AdministradorEscenas : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

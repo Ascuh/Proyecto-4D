@@ -13,6 +13,7 @@ public class RaycastCam : MonoBehaviour
     public static bool tocandoLlave;
     public static bool tocandoCand;
     public static bool tocandoPuerta;
+    public static bool lastimado;
 
     bool fogPrendida;
 
@@ -35,6 +36,7 @@ public class RaycastCam : MonoBehaviour
     public GameObject prenderFogata;
 
     public PlayerCam ScriptCam;
+    public AdministradorEscenas adminEscenas;
 
     // Start is called before the first frame update
     void Start()
@@ -214,12 +216,22 @@ public class RaycastCam : MonoBehaviour
         {
             StartCoroutine(tiempoSangre());
         }
+    
     }
 
     IEnumerator tiempoSangre()
     {
-        sangre.SetBool("lastimado", true);
-        yield return new WaitForSeconds(5);
-        sangre.SetBool("lastimado", false);
+        if (lastimado)
+        {
+            adminEscenas.MainMenu();
+        }
+        else
+        {
+            sangre.SetBool("lastimado", true);
+            lastimado = true;
+            yield return new WaitForSeconds(5);
+            sangre.SetBool("lastimado", false);
+            lastimado = false;
+        }
     }
 }
