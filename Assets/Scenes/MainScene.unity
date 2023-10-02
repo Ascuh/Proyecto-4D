@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.000046229205, g: 0.00010000319, b: 0.0030593106, a: 1}
+  m_IndirectSpecularColor: {r: 0.000060251976, g: 0.00013044893, b: 0.0039449795, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -619,8 +619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e79ccada0e08e45b25a2375afbe5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abierta: 0
-  animPuerta: {fileID: 0}
 --- !u!1 &181394790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ce21a397f71abb44aafe126311237ab, type: 3}
@@ -703,8 +701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e79ccada0e08e45b25a2375afbe5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abierta: 0
-  animPuerta: {fileID: 0}
 --- !u!1 &181648997 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 112c2bfe16fbc9b419e6a53a2ec2a1bf, type: 3}
@@ -9013,8 +9009,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e79ccada0e08e45b25a2375afbe5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abierta: 0
-  animPuerta: {fileID: 0}
 --- !u!1001 &885309761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9200,8 +9194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e79ccada0e08e45b25a2375afbe5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abierta: 0
-  animPuerta: {fileID: 0}
 --- !u!1001 &930780094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11516,8 +11508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e79ccada0e08e45b25a2375afbe5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abierta: 0
-  animPuerta: {fileID: 0}
 --- !u!1 &1463109035
 GameObject:
   m_ObjectHideFlags: 0
