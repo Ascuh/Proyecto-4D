@@ -195,6 +195,20 @@ public class RaycastCam : MonoBehaviour
         {
             prenderFogata.SetActive(false);
         }
+
+        //script de los cajones
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Cajon")))
+        {
+            textoPuerta.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                toco.collider.gameObject.GetComponent<Cajon>().Interactuar();
+            }
+        }
+        else
+        {
+            textoPuerta.SetActive(false);
+        }
     }
 
     IEnumerator tiempoFogata()
