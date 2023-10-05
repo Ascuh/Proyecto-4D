@@ -13,12 +13,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: patchy_cement1_Base_Color
-    second: {fileID: 2800000, guid: d5e15c7dafde4bc48a11d18cba3439f5, type: 3}
+    second: {fileID: 2800000, guid: d91125365f46d8d498031512678d0243, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: patchy_cement1_Normal
-    second: {fileID: 2800000, guid: bc9f95b4c4856d2449e799b05aff0792, type: 3}
+    second: {fileID: 2800000, guid: 59114a26699943f46bd80216c6d39e9a, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

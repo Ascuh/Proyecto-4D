@@ -18,7 +18,9 @@ public class wind : MonoBehaviour
     */
     [Header("Set the length of the array the same as the number of materials")]
     [Tooltip("x, y, z -> wind offset; w -> wind force")]
-    [SerializeField] private Vector4[] Wind;
+    [SerializeField] public Vector4[] Wind;
+    
+
     /*
      * Good settings to start with :
      * Leafs : Vector4(0.1f, 0.1f, 0.1f, 0.1f)
@@ -33,7 +35,12 @@ public class wind : MonoBehaviour
 
     void Awake()
     {
-        if (!render) render = GetComponent<Renderer>();
+
+        for (int i = 0; i < Wind.Length; i++)
+        {
+            Wind[i].w = Wind[i].w / 2;
+        }
+            if (!render) render = GetComponent<Renderer>();
         mats = render.materials;
     }
 
