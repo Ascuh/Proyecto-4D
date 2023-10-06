@@ -13,6 +13,7 @@ public class RaycastCam : MonoBehaviour
     public static bool tocandoLlave;
     public static bool tocandoCand;
     public static bool tocandoPuerta;
+    public static bool tocandoPerilla;
     public static bool lastimado;
 
     bool fogPrendida;
@@ -209,6 +210,22 @@ public class RaycastCam : MonoBehaviour
         {
             textoPuerta.SetActive(false);
         }
+
+        //script de las luces
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Perilla")))
+        {
+            tocandoPerilla = true;
+            if (tocandoPerilla && Input.GetMouseButtonDown(0))
+            {
+                  toco.collider.gameObject.GetComponent<Perilla>().activarPerilla();
+            }
+
+        }
+        else
+        {
+            tocandoPerilla = false;
+        }
+
     }
 
     IEnumerator tiempoFogata()
