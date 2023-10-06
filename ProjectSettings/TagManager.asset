@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Obstacle
   - deny
+  - Derrumbe
+  - tiemblaPoco
+  - tiembaMucho
+  - Muerte
+  - salidaCueva
   layers:
   - Default
   - TransparentFX
