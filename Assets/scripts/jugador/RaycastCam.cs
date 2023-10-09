@@ -34,6 +34,7 @@ public class RaycastCam : MonoBehaviour
 
     public GameObject fuego;
     public GameObject textoPuerta;
+    public GameObject textoCajon;
     public GameObject textoGenerador;
     public GameObject puertaBloqueada;
     public GameObject prenderFogata;
@@ -202,7 +203,7 @@ public class RaycastCam : MonoBehaviour
         //script de los cajones
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Cajon")))
         {
-            textoPuerta.SetActive(true);
+            textoCajon.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 toco.collider.gameObject.GetComponent<Cajon>().Interactuar();
@@ -210,7 +211,7 @@ public class RaycastCam : MonoBehaviour
         }
         else
         {
-            textoPuerta.SetActive(false);
+            textoCajon.SetActive(false);
         }
 
         //script de las luces
@@ -234,7 +235,11 @@ public class RaycastCam : MonoBehaviour
             tocandoGenerador = true;
             if (!Generador.generador)
             {
-            textoPuerta.SetActive(true);
+            textoGenerador.SetActive(true);
+            }
+            else
+            {
+                textoGenerador.SetActive(false);
             }
 
             if (tocandoGenerador && Input.GetKeyDown(KeyCode.E))
@@ -245,7 +250,7 @@ public class RaycastCam : MonoBehaviour
         }
         else
         {
-            textoPuerta.SetActive(false);
+            textoGenerador.SetActive(false);
             tocandoGenerador = false;
         }
 
