@@ -14,6 +14,7 @@ public class RaycastCam : MonoBehaviour
     public static bool tocandoCand;
     public static bool tocandoPuerta;
     public static bool tocandoPerilla;
+    public static bool tocandoGenerador;
     public static bool lastimado;
 
     bool fogPrendida;
@@ -33,6 +34,7 @@ public class RaycastCam : MonoBehaviour
 
     public GameObject fuego;
     public GameObject textoPuerta;
+    public GameObject textoGenerador;
     public GameObject puertaBloqueada;
     public GameObject prenderFogata;
 
@@ -224,6 +226,27 @@ public class RaycastCam : MonoBehaviour
         else
         {
             tocandoPerilla = false;
+        }
+
+        //script del generador
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Generador")))
+        {
+            tocandoGenerador = true;
+            if (!Generador.generador)
+            {
+            textoPuerta.SetActive(true);
+            }
+
+            if (tocandoGenerador && Input.GetKeyDown(KeyCode.E))
+            {
+                toco.collider.gameObject.GetComponent<Generador>().funcionamiento();
+            }
+
+        }
+        else
+        {
+            textoPuerta.SetActive(false);
+            tocandoGenerador = false;
         }
 
     }

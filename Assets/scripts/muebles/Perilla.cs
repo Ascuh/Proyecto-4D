@@ -20,8 +20,10 @@ public class Perilla : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-   
-
+        if (!Generador.generador)
+        {
+            luz.SetActive(false);
+        }
     }
 
     public void activarPerilla()
