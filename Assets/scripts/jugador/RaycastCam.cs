@@ -182,8 +182,17 @@ public class RaycastCam : MonoBehaviour
             puertaBloqueada.SetActive(false);
         }
 
-        //script de la fogata
-        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Fogata")))
+        //script de la puerta final
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("PuertaFinal")))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                StartCoroutine(tiempoPuertaFinal());
+            }
+        }
+
+            //script de la fogata
+            if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Fogata")))
         {
             if (!fogPrendida)
             {
@@ -292,5 +301,12 @@ public class RaycastCam : MonoBehaviour
             sangre.SetBool("lastimado", false);
             lastimado = false;
         }
+    }
+    IEnumerator tiempoPuertaFinal()
+    {
+        pantallaNegra.SetBool("prendida", true);
+        yield return new WaitForSeconds(2);
+        adminEscenas.CasaFinal();
+
     }
 }
