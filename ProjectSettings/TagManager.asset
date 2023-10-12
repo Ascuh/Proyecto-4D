@@ -11,6 +11,7 @@ TagManager:
   - tiembaMucho
   - Muerte
   - salidaCueva
+  - escaleras
   layers:
   - Default
   - TransparentFX
