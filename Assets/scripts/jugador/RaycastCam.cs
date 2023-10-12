@@ -37,6 +37,7 @@ public class RaycastCam : MonoBehaviour
     public GameObject textoCajon;
     public GameObject textoGenerador;
     public GameObject puertaBloqueada;
+    public GameObject puertaFinal;
     public GameObject prenderFogata;
 
     public PlayerCam ScriptCam;
@@ -185,10 +186,16 @@ public class RaycastCam : MonoBehaviour
         //script de la puerta final
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("PuertaFinal")))
         {
+            puertaFinal.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 StartCoroutine(tiempoPuertaFinal());
+                puertaFinal.SetActive(false);
             }
+        }
+        else
+        {
+            puertaFinal.SetActive(false);
         }
 
             //script de la fogata
@@ -305,7 +312,7 @@ public class RaycastCam : MonoBehaviour
     IEnumerator tiempoPuertaFinal()
     {
         pantallaNegra.SetBool("prendida", true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5F);
         adminEscenas.CasaFinal();
 
     }
