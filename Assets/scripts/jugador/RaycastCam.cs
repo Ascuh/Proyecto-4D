@@ -13,6 +13,8 @@ public class RaycastCam : MonoBehaviour
     public static bool tocandoLlave;
     public static bool tocandoCand;
     public static bool tocandoPuerta;
+    public static bool tocandoPerilla;
+    public static bool tocandoGenerador;
     public static bool lastimado;
 
     bool fogPrendida;
@@ -32,7 +34,10 @@ public class RaycastCam : MonoBehaviour
 
     public GameObject fuego;
     public GameObject textoPuerta;
+    public GameObject textoCajon;
+    public GameObject textoGenerador;
     public GameObject puertaBloqueada;
+    public GameObject puertaFinal;
     public GameObject prenderFogata;
 
     public PlayerCam ScriptCam;
@@ -178,8 +183,23 @@ public class RaycastCam : MonoBehaviour
             puertaBloqueada.SetActive(false);
         }
 
-        //script de la fogata
-        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Fogata")))
+        //script de la puerta final
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("PuertaFinal")))
+        {
+            puertaFinal.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                StartCoroutine(tiempoPuertaFinal());
+                puertaFinal.SetActive(false);
+            }
+        }
+        else
+        {
+            puertaFinal.SetActive(false);
+        }
+
+            //script de la fogata
+            if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Fogata")))
         {
             if (!fogPrendida)
             {
@@ -195,6 +215,61 @@ public class RaycastCam : MonoBehaviour
         {
             prenderFogata.SetActive(false);
         }
+
+        //script de los cajones
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Cajon")))
+        {
+            textoCajon.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                toco.collider.gameObject.GetComponent<Cajon>().Interactuar();
+            }
+        }
+        else
+        {
+            textoCajon.SetActive(false);
+        }
+
+        //script de las luces
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Perilla")))
+        {
+            tocandoPerilla = true;
+            if (tocandoPerilla && Input.GetMouseButtonDown(0))
+            {
+                  toco.collider.gameObject.GetComponent<Perilla>().activarPerilla();
+            }
+
+        }
+        else
+        {
+            tocandoPerilla = false;
+        }
+
+        //script del generador
+        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Generador")))
+        {
+            tocandoGenerador = true;
+            if (!Generador.generador)
+            {
+            textoGenerador.SetActive(true);
+            }
+            else
+            {
+                textoGenerador.SetActive(false);
+            }
+
+            if (tocandoGenerador && Input.GetKeyDown(KeyCode.E))
+            {
+                toco.collider.gameObject.GetComponent<Generador>().funcionamiento();
+            }
+
+        }
+        else
+        {
+            textoGenerador.SetActive(false);
+            tocandoGenerador = false;
+        }
+
     }
 
     IEnumerator tiempoFogata()
@@ -233,5 +308,12 @@ public class RaycastCam : MonoBehaviour
             sangre.SetBool("lastimado", false);
             lastimado = false;
         }
+    }
+    IEnumerator tiempoPuertaFinal()
+    {
+        pantallaNegra.SetBool("prendida", true);
+        yield return new WaitForSeconds(1.5F);
+        adminEscenas.CasaFinal();
+
     }
 }

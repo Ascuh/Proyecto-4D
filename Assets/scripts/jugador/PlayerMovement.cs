@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     public float stamina;
     private bool tired;
     private bool Running;
+    bool escaleras;
 
     public float crouchSpeed;
     public float crouchYScale;
@@ -74,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
                     moveSpeed = 6;
                 }
 
-                else if (Input.GetKeyDown(KeyCode.LeftControl))
+                else if (Input.GetKeyDown(KeyCode.LeftControl) && !Running)
                 {
                     transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
                     rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
@@ -83,7 +84,10 @@ public class PlayerMovement : MonoBehaviour
                 else if (Input.GetKeyUp(KeyCode.LeftControl))
                 {
                     transform.localScale = new Vector3(transform.localScale.x, startYscale, transform.localScale.z);
-                    moveSpeed = 3;
+                    if (escaleras)
+                        moveSpeed = 4;
+                    else
+                        moveSpeed = 3;
                 }
 
                 else if (Input.GetKeyUp(KeyCode.LeftShift))
@@ -109,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
             if (stamina <= 0)
             {
                 tired = true;
+                moveSpeed = 3;
             }
 
             if (stamina >= 100)
@@ -226,5 +231,17 @@ public class PlayerMovement : MonoBehaviour
     public void die()
     {
         Destroy(gameObject);
+    }
+
+    private void OnColissionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("escaleras"))
+        {
+            escaleras = true;
+        }
+        else
+        {
+            escaleras = false;
+        }
     }
 }

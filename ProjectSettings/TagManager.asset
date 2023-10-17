@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Obstacle
   - deny
+  - Derrumbe
+  - tiemblaPoco
+  - tiembaMucho
+  - Muerte
+  - salidaCueva
+  - escaleras
   layers:
   - Default
   - TransparentFX
@@ -22,10 +28,10 @@ TagManager:
   - Candado
   - PuertaCand
   - Fogata
-  - 
-  - 
-  - 
-  - 
+  - Cajon
+  - Perilla
+  - Generador
+  - PuertaFinal
   - 
   - 
   - 
