@@ -8,6 +8,8 @@ public class PlayerCam : MonoBehaviour
     public float sensX;
     public float sensY;
 
+    public bool zoom;
+
     public Transform orientation;
 
     float xRotation;
@@ -24,6 +26,8 @@ public class PlayerCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!zoom)
+        {
         // get mouse input
 
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
@@ -40,6 +44,8 @@ public class PlayerCam : MonoBehaviour
         //rotate cam and orientation 
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+
+        }
 
     }
 }
