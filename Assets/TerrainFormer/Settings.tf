@@ -20,8 +20,8 @@
                 "invertFalloff": false,
                 "selectedBrushTab": "All",
                 "selectedBrushId": "_DefaultFalloffBrushName",
-                "brushSize": 5.0,
-                "brushSpeed": 2.5,
+                "brushSize": 66.0,
+                "brushSpeed": 0.10000000149011612,
                 "brushRoundness": 1.0,
                 "brushAngle": 0.0,
                 "brushFalloff": {
@@ -280,7 +280,7 @@
                 "invertFalloff": false,
                 "selectedBrushTab": "All",
                 "selectedBrushId": "_DefaultFalloffBrushName",
-                "brushSize": 20.0,
+                "brushSize": 104.0,
                 "brushSpeed": 100.0,
                 "brushRoundness": 1.0,
                 "brushAngle": 0.0,
@@ -314,14 +314,14 @@
                     "m_PostInfinity": 2,
                     "m_RotationOrder": 4
                 },
-                "useBrushSpacing": false,
+                "useBrushSpacing": true,
                 "minBrushSpacing": 1.0,
-                "maxBrushSpacing": 30.000001907348634,
+                "maxBrushSpacing": 3.526400089263916,
                 "useRandomRotation": false,
                 "minRandomRotation": -180.0,
                 "maxRandomRotation": 180.0,
                 "useRandomOffset": false,
-                "randomOffset": 30.0,
+                "randomOffset": 13.0,
                 "invertBrushTexture": false
             }
         }
@@ -339,7 +339,7 @@
     "mouldToolRaycastTopDown": true,
     "mouldToolBoxFilterSize": 1,
     "mouldAllIterations": 5,
-    "targetOpacity": 0.5270000100135803,
+    "targetOpacity": 1.0,
     "selectedTextureIndex": 0,
     "mainDirectory": "Assets/TerrainFormer/"
 }
