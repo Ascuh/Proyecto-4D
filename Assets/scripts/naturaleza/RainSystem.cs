@@ -6,6 +6,7 @@ public class RainSystem : MonoBehaviour
 {
     public ParticleSystem rain;
     float rate = 0;
+    public float rateSum = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class RainSystem : MonoBehaviour
     {
         if (rate < maxRain)
         {
-            rate += 1;
+            rate += rateSum;
         }
 
         var rainEmission = rain.emission;
