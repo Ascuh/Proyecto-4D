@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_FogMode: 2
   m_FogDensity: 0.05
@@ -39950,7 +39950,7 @@ Terrain:
   m_TreeCrossFadeLength: 8
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 0.035
+  m_DetailObjectDensity: 0.656
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
@@ -43531,7 +43531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2018304514
 MonoBehaviour:
   m_ObjectHideFlags: 0
