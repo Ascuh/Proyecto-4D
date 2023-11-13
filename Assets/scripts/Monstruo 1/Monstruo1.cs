@@ -75,26 +75,12 @@ public class Monstruo1 : MonoBehaviour
 
     void Attack()
     {
-        if (playerMovement.life)
-        {
-            cam2.enabled = true;
-            cam1.enabled = false;
-            anim.SetBool("attack", true);
-            anim.SetBool("kill", false);
-            agent.speed = 0;
-            Invoke("resetCams", 1);
-            Invoke("resetSpeed", 3);
-        }
-         else
-        {
             cam2.enabled = true;
             cam1.enabled = false;
             anim.SetBool("kill", true);
             anim.SetBool("attack", false);
             agent.speed = 0;
             playerMovement.die();
-            Invoke("resetSpeed", 3);
-         }
     }
 
     void SearchForDest()
@@ -109,26 +95,5 @@ public class Monstruo1 : MonoBehaviour
         }
     }
 
-    void resetSpeed()
-    {
-        cam1.enabled = true;
-        cam2.enabled = false;
-        agent.speed = 3.5f;
-        playerMovement.life = false;
-        anim.SetBool("attack", false);
-        anim.SetBool("kill", false);
-        Vector3 direction = (player.transform.position - transform.position).normalized;
-        float forceMagnitude = 10f;
-        player.GetComponent<Rigidbody>().AddForce(-direction * forceMagnitude, ForceMode.Impulse);
-    }
-
-    void resetCams()
-    {
-        cam1.enabled = true;
-        cam2.enabled = false;
-        Vector3 direction = (player.transform.position - transform.position).normalized;
-        float forceMagnitude = 10f;
-        player.GetComponent<Rigidbody>().AddForce(-direction * forceMagnitude, ForceMode.Impulse);
-    }
 
 }
