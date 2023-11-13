@@ -21,7 +21,7 @@
                 "selectedBrushTab": "All",
                 "selectedBrushId": "_DefaultFalloffBrushName",
                 "brushSize": 31.0,
-                "brushSpeed": 0.10000000149011612,
+                "brushSpeed": 0.20000000298023225,
                 "brushRoundness": 1.0,
                 "brushAngle": 0.0,
                 "brushFalloff": {
