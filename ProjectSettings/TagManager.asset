@@ -12,6 +12,7 @@ TagManager:
   - Muerte
   - salidaCueva
   - escaleras
+  - ARBOL
   layers:
   - Default
   - TransparentFX
