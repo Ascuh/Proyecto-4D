@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8433562725676285734}
   - component: {fileID: 4802476613015433347}
   - component: {fileID: 7296152733360784457}
+  - component: {fileID: 2910294494275749995}
+  - component: {fileID: 8269412642031251701}
+  - component: {fileID: 2488705212428948112}
   m_Layer: 0
   m_Name: mesaCocina2
   m_TagString: Untagged
@@ -85,3 +88,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2910294494275749995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9097790427974116764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.20022964, y: 1.4043214, z: 0.20986557}
+  m_Center: {x: -0.5139637, y: 0.70244884, z: 8.737509}
+--- !u!65 &8269412642031251701
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9097790427974116764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22571564, y: 1.4043217, z: 0.21835709}
+  m_Center: {x: -0.50971603, y: 0.70244896, z: 1.2064762}
+--- !u!65 &2488705212428948112
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9097790427974116764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 0.19519114, z: 8}
+  m_Center: {x: 0, y: 1.5024048, z: 4.978364}

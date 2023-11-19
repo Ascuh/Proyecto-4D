@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 8421375756560705266}
   - component: {fileID: 4859778948628490583}
   - component: {fileID: 7247858043847499165}
-  m_Layer: 0
+  - component: {fileID: 780196744037916175}
+  - component: {fileID: 8486268111204114019}
+  m_Layer: 8
   m_Name: EL SILLON pero mas chico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,3 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &780196744037916175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9193373018566655048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3055, y: 0.8629415, z: 2.298069}
+  m_Center: {x: 0.009027481, y: 0.43147075, z: 0.0000019073486}
+--- !u!65 &8486268111204114019
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9193373018566655048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.101387, y: 1.0790296, z: 2.3490345}
+  m_Center: {x: 0.5728569, y: 1.4059641, z: 0.025482774}

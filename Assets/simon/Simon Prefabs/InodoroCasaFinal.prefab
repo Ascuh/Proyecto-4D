@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 1397814933931565813}
   - component: {fileID: 2650881661523537232}
   - component: {fileID: 228880501210208666}
-  m_Layer: 0
+  - component: {fileID: 732199577348508760}
+  - component: {fileID: 8993858944035734923}
+  m_Layer: 8
   m_Name: InodoroCasaFinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1742288231452014671}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 24.132418, y: 0.037877083, z: 26.093876}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.35, y: 0.4, z: 0.35}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,3 +86,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &732199577348508760
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742288231452014671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9090424, y: 1.9575987, z: 0.80419827}
+  m_Center: {x: 0, y: 2.4123769, z: 1.5927348}
+--- !u!65 &8993858944035734923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742288231452014671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1863823, y: 1.4462364, z: 3.204999}
+  m_Center: {x: 0, y: 0.6919464, z: 0.39233434}

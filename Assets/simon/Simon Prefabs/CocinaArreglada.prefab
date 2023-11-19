@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8547232185516205090}
   - component: {fileID: 4697823917307702151}
   - component: {fileID: 7410377141627739981}
+  - component: {fileID: 1942785643039448775}
+  - component: {fileID: 7016056723043936135}
   m_Layer: 0
   m_Name: CocinaArreglada
   m_TagString: Untagged
@@ -86,3 +88,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1942785643039448775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067451184877076120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2012806, y: 0.05837488, z: 3.389265}
+  m_Center: {x: -0.0013868213, y: 1.4315388, z: 1.0999999}
+--- !u!65 &7016056723043936135
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067451184877076120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7705984, y: 0.7310164, z: 0.7723541}
+  m_Center: {x: -0.003437519, y: 1.035339, z: 1.0466766}

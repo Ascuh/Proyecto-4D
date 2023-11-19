@@ -11,7 +11,11 @@ GameObject:
   - component: {fileID: 6442296458785339298}
   - component: {fileID: 7982764387014752263}
   - component: {fileID: 5272746097557097677}
-  m_Layer: 0
+  - component: {fileID: 3851147920086453137}
+  - component: {fileID: 2779601278236302629}
+  - component: {fileID: 4274188362559533229}
+  - component: {fileID: 1462690101172082446}
+  m_Layer: 8
   m_Name: El Sillon Corregido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,3 +87,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3851147920086453137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921233862814887192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.335897, y: 0.78621656, z: 5.9279785}
+  m_Center: {x: 0.0020514727, y: 0.42511663, z: 0.0040016174}
+--- !u!65 &2779601278236302629
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921233862814887192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.82349396, y: 1.2139602, z: 4.9677277}
+  m_Center: {x: 0.502182, y: 1.4151952, z: 0.052013397}
+--- !u!65 &4274188362559533229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921233862814887192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.335897, y: 0.6938216, z: 0.57455826}
+  m_Center: {x: 0.0020514727, y: 1.163128, z: -2.7127209}
+--- !u!65 &1462690101172082446
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921233862814887192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.335897, y: 0.661813, z: 0.45452118}
+  m_Center: {x: 0.0020514727, y: 1.163128, z: 2.7727394}
