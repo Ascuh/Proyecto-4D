@@ -3,7 +3,47 @@ guid: 913651bc275020e44be02d4214df6040
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Old Wood
+    second: {fileID: 2100000, guid: a9d7d0a042f91dd4688a58b361b467cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stainless Steel
+    second: {fileID: 2100000, guid: 6ef9765ff4a4a894a842f094a06a9a6d, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Diffuse
+    second: {fileID: 2800000, guid: 015c0922d3a91c447ae9ffd20c92b6a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Normal
+    second: {fileID: 2800000, guid: ca533d3f4e62e2843890905cd0a8f904, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roughness
+    second: {fileID: 2800000, guid: fa7c7901369e2534cac36ff24f524650, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood051_2K_Color
+    second: {fileID: 2800000, guid: ce7b0c0ac793603499c692a837e510ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood051_2K_Normal
+    second: {fileID: 2800000, guid: 7255dd504b58ceb4d8024c71ba391cdd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood051_2K_Roughness
+    second: {fileID: 2800000, guid: b718a3c0d0271544db1e8b98d5864547, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
