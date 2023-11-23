@@ -60,14 +60,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BumpScale: 1
+    - _BumpScale: 5
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.089
+    - _GlossMapScale: 0.381
     - _Glossiness: 0.08
     - _GlossyReflections: 1
-    - _Metallic: 0.107
+    - _Metallic: 0.216
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
