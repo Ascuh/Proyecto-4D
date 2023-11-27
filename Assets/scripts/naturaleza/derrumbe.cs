@@ -69,7 +69,7 @@ public class derrumbe : MonoBehaviour
             piedras.SetActive(true);
             lluvia.SetActive(false);
             camaraSacudida.IniciarSacudida(3, 0.5f);
-            RenderSettings.fog = false;
+         //   RenderSettings.fog = false;
         }
     }
     private void TiemblaPoco()
@@ -101,7 +101,7 @@ public class derrumbe : MonoBehaviour
     private void SalidaCueva()
     {
         piedras.SetActive(false);
-        RenderSettings.fog = true;
+     //   RenderSettings.fog = true;
     }
     private void Demo()
     {

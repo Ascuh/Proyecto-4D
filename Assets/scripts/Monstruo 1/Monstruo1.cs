@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Monstruo1 : MonoBehaviour
 {
@@ -21,8 +22,9 @@ public class Monstruo1 : MonoBehaviour
 
     [SerializeField] Camera cam1;
     [SerializeField] Camera cam2;
+    [SerializeField] GameObject flashlight;
 
-    [SerializeField ]Animator anim;
+    [SerializeField] Animator anim;
 
     void Start()
     {
@@ -81,6 +83,8 @@ public class Monstruo1 : MonoBehaviour
             anim.SetBool("attack", false);
             agent.speed = 0;
             playerMovement.die();
+            flashlight.SetActive(false);
+            Invoke("MainMenu", 3);
     }
 
     void SearchForDest()
@@ -93,6 +97,13 @@ public class Monstruo1 : MonoBehaviour
         {
             walkPointSet = true;
         }
+    }
+
+    void MainMenu()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene(0);
     }
 
 

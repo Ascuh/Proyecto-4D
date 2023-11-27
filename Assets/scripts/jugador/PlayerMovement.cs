@@ -49,11 +49,6 @@ public class PlayerMovement : MonoBehaviour
 
     public bool life = true;
 
-    //sonidos
-    public GameObject caminar;
-    public GameObject correr;
-    public GameObject lluvia;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -78,7 +73,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Running = true;
                     moveSpeed = 6;
-                    correr.SetActive(true);
                 }
 
                 else if (Input.GetKeyDown(KeyCode.LeftControl) && !Running)
@@ -100,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     moveSpeed = 3;
                     Running = false;
-                    correr.SetActive(false);
                 }
             }
 
