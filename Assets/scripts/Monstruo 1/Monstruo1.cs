@@ -26,6 +26,8 @@ public class Monstruo1 : MonoBehaviour
 
     [SerializeField] Animator anim;
 
+    public AudioSource jmpscare;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -84,7 +86,16 @@ public class Monstruo1 : MonoBehaviour
             agent.speed = 0;
             playerMovement.die();
             flashlight.SetActive(false);
+       //Jumpscare
+
+
+        jmpscare.enabled = true;
+
+
             Invoke("MainMenu", 3);
+
+ 
+
     }
 
     void SearchForDest()

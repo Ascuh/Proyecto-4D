@@ -49,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool life = true;
 
+    public AudioSource respirar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -113,11 +115,13 @@ public class PlayerMovement : MonoBehaviour
             if (stamina <= 0)
             {
                 tired = true;
+                respirar.enabled = true;
                 moveSpeed = 3;
             }
 
             if (stamina >= 100)
             {
+                respirar.enabled = false;
                 tired = false;
             }
 

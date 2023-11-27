@@ -42,6 +42,8 @@ public class RaycastCam : MonoBehaviour
     public PlayerCam ScriptCam;
     public AdministradorEscenas adminEscenas;
 
+    public AudioSource quemado;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -301,11 +303,13 @@ public class RaycastCam : MonoBehaviour
         }
         else
         {
+            quemado.enabled = true;
             sangre.SetBool("lastimado", true);
             lastimado = true;
             yield return new WaitForSeconds(5);
             sangre.SetBool("lastimado", false);
             lastimado = false;
+            quemado.enabled = false;
         }
     }
     IEnumerator tiempoPuertaFinal()
