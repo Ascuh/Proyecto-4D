@@ -13,6 +13,7 @@ TagManager:
   - salidaCueva
   - escaleras
   - ARBOL
+  - demo
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ public class derrumbe : MonoBehaviour
 {
     public CamaraSacudida camaraSacudida;
     public GameObject piedras;
+    public GameObject lluvia;
     bool derrumbo;
     bool tiemblaPoco;
     bool tiemblaMucho;
@@ -15,6 +16,7 @@ public class derrumbe : MonoBehaviour
     public string tiembMucho = "tiemblaMucho";
     public string muert = "Muerte";
     public string saliCueva = "salidaCueva";
+    public string dem = "demo";
 
     public AdministradorEscenas adminEscenas;
 
@@ -52,6 +54,10 @@ public class derrumbe : MonoBehaviour
         {
             SalidaCueva();
         }
+        if (other.CompareTag(dem))
+        {
+            Demo();
+        }
 
     }
 
@@ -61,6 +67,7 @@ public class derrumbe : MonoBehaviour
         {
             derrumbo = true;
             piedras.SetActive(true);
+            lluvia.SetActive(false);
             camaraSacudida.IniciarSacudida(3, 0.5f);
             RenderSettings.fog = false;
         }
@@ -96,4 +103,9 @@ public class derrumbe : MonoBehaviour
         piedras.SetActive(false);
         RenderSettings.fog = true;
     }
+    private void Demo()
+    {
+        adminEscenas.MainMenu();
+    }
 }
+
