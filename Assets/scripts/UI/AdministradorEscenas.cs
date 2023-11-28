@@ -30,13 +30,21 @@ public class AdministradorEscenas : MonoBehaviour
         SceneManager.LoadScene("CasaFinal");
     }
 
-        IEnumerator loadSceneAsync(string name)
+    IEnumerator loadSceneAsync(string name)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync("MainScene");
         pantallaDeCarga.SetActive(true);
         while (!operation.isDone)
         {
             yield return null;
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            CasaFinal();
         }
     }
 }

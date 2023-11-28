@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Objeto : MonoBehaviour
 {
-    public static bool drop = false;
+    public AgarrarObjetos agarrarObjetos;
     MeshRenderer meshrenderer;
     public GameObject objeto2d;
     Monstruo3 monstruo3;
@@ -23,9 +23,9 @@ public class Objeto : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollision(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle") && drop)
+        if (collision.gameObject.CompareTag("Obstacle") && agarrarObjetos.dropped)
         {
             monstruo3.AddWaypoint(transform.position);
             Destroy(gameObject);

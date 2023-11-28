@@ -17,6 +17,8 @@ public class AgarrarObjetos : MonoBehaviour
 
     public Objeto objeto;
 
+    public bool dropped;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -97,8 +99,7 @@ public class AgarrarObjetos : MonoBehaviour
         float random = Random.Range(-1f, 1f);
         rb.AddTorque(new Vector3(random, random, random) * 10);
 
-        Objeto.drop = true;
-
+        dropped = true;
         objeto.Solto();
     }
 
