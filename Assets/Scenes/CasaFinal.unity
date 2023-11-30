@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1696,14 +1696,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604991072}
-  m_LocalRotation: {x: -0, y: -0, z: -0.38445672, w: 0.9231431}
-  m_LocalPosition: {x: 1.77, y: 2.6, z: -11.380001}
+  m_LocalRotation: {x: -0, y: -0, z: -0.4052753, w: 0.9141947}
+  m_LocalPosition: {x: 1.323, y: 2.691, z: -11.380001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 123275088}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.22}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -47.817}
 --- !u!65 &604991074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5670,6 +5670,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01076b24cfae0b148820336904b9aafc, type: 3}
+--- !u!1 &1938006386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1938006387}
+  - component: {fileID: 1938006388}
+  m_Layer: 8
+  m_Name: costado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1938006387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938006386}
+  m_LocalRotation: {x: -0, y: -0, z: -0.4052753, w: 0.9141947}
+  m_LocalPosition: {x: 2.6, y: 1.28, z: -13.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 123275088}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -47.817}
+--- !u!65 &1938006388
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938006386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.028308, y: 7.7288494, z: 0.49595642}
+  m_Center: {x: -0.025347346, y: 0.19331074, z: 0.2520218}
 --- !u!1 &1960553712
 GameObject:
   m_ObjectHideFlags: 0
@@ -6130,6 +6175,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  maxSlopeAngle: 60
   orientation: {fileID: 1233606113}
   modificadorGravedad: 2
   maxStamina: 100
