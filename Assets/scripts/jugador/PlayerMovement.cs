@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit slopeHit;
 
     public Transform orientation;
+    [SerializeField] CapsuleCollider playerCollider;
 
     float horizontalInput;
     float verticalInput;
@@ -69,6 +70,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Hacer un Vector para el shader, usado para el movimiento del pasto respecto a la posición del jugador
+
+        Shader.SetGlobalVector("_Player", transform.position + Vector3.up * playerCollider.radius);
+
         if (RaycastCam.lastimado)
             moveSpeed = 2;
         else
