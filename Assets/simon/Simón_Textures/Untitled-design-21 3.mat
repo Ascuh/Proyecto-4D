@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Untitled-design-21 3
-  m_Shader: {fileID: -6465566751694194690, guid: f73517764426bef40916cc499bec6fd2, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 277696c5ebe44474f8f6ed204086ed13, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -75,6 +75,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _BumpScale: 1
@@ -89,18 +90,22 @@ Material:
     - _Mode: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.072
-    - _Scale: 0.1
-    - _Smoothness: 0
+    - _Scale: 0.2
+    - _Smoothness: 0.184
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 1
+    - _Speed: 7
     - _SrcBlend: 1
-    - _Strength: 1
+    - _Strength: 5
     - _UVSec: 0
+    - _WindSpeed: 5
+    - _WindStrength: 0.023
     - _ZWrite: 1
     m_Colors:
-    - _Albedo: {r: 1, g: 1, b: 1, a: 0}
+    - _Albedo: {r: 0.4948619, g: 0.5377358, b: 0.34242612, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LeafColor: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
