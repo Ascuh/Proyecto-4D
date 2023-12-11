@@ -54,7 +54,7 @@ PrefabInstance:
     - target: {fileID: -5754084199372789682, guid: f8105bf8a29c67941a66417df5fc68e7, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 7252620314616412052, guid: 50a05f118a454244e8ee4d7d707949c2, type: 3}
+      objectReference: {fileID: 7252620314616412052, guid: 1a333fa484c6f3a49aa051a67d33b9b6, type: 3}
     - target: {fileID: 919132149155446097, guid: f8105bf8a29c67941a66417df5fc68e7, type: 3}
       propertyPath: m_Name
       value: Pino Variant
