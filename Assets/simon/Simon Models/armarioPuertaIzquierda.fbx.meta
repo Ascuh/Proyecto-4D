@@ -3,7 +3,27 @@ guid: 4381f926895e7264e89fdb728c47c9e9
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Old Wood
+    second: {fileID: 2100000, guid: ddf8609dd73d4274b9f63f7ac9b4caf8, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood051_2K_Color
+    second: {fileID: 2800000, guid: ac48857f5a7b44f4cb116d3470df0a19, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood051_2K_Normal
+    second: {fileID: 2800000, guid: c68b2a2dab24768429402867b57ac954, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood051_2K_Roughness
+    second: {fileID: 2800000, guid: b425f7d510885914f9ed212e0eb37c0a, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
