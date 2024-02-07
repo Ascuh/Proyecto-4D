@@ -4498,6 +4498,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 14.087727, z: 3.161934}
   m_Center: {x: -0.0000060509456, y: 0.4387407, z: 0.021644592}
+--- !u!1001 &607953322
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_RootOrder
+      value: 165
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 91.52
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.898
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.198
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_Name
+      value: Barra De Madera (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
 --- !u!1001 &649755273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6628,6 +6697,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c4f0dfb9dcf1e47baf44a514541ab2, type: 3}
+--- !u!1001 &1027312712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_RootOrder
+      value: 164
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 95.736
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.898
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.735
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
+      propertyPath: m_Name
+      value: Barra De Madera (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f73ca9c05c801d4ba958d643ebbd18a, type: 3}
 --- !u!1001 &1029989588
 PrefabInstance:
   m_ObjectHideFlags: 0
