@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
 
-    [Header("Ground Ckeck")]
+    [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
@@ -56,23 +56,63 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource respirar;
 
+    [Header("Camera Bobbing")]
+    public Transform cameraTransform; // Referencia a la cámara
+    public float bobFrequency = 3f;   // Frecuencia del movimiento
+    public float bobAmplitude = 0.05f; // Amplitud del movimiento (qué tanto se mueve)
+    private float defaultCameraY;      // Para recordar la posición original de la cámara
+    private float bobbingTimer;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Inicializa la referencia del Rigidbody y la gravedad
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
         Physics.gravity *= modificadorGravedad;
 
         startYscale = transform.localScale.y;
+
+        // Posición original de la cámara
+        defaultCameraY = cameraTransform.localPosition.y;
+
+        // Reinicia la gravedad al valor inicial
+        Physics.gravity = new Vector3(0, -9.81f * modificadorGravedad, 0);
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        //Hacer un Vector para el shader, usado para el movimiento del pasto respecto a la posición del jugador
+        // Control de bobbing de la cámara basado en si está corriendo o caminando
+        if (Running)
+        {
+            bobFrequency = 15f;  // Frecuencia para correr
+            bobAmplitude = 0.05f;  // Amplitud para correr
+        }
+        else
+        {
+            bobFrequency = 10f;  // Frecuencia para caminar
+            bobAmplitude = 0.03f;  // Amplitud para caminar
+        }
 
+        // Hacer un Vector para el shader, usado para el movimiento del pasto respecto a la posición del jugador
         Shader.SetGlobalVector("_Player", transform.position + Vector3.up * playerCollider.radius);
+
+        // Movimiento de la cámara
+        if (grounded && (horizontalInput != 0 || verticalInput != 0))
+        {
+            bobbingTimer += Time.deltaTime * bobFrequency;
+            float bobbingOffset = Mathf.Sin(bobbingTimer) * bobAmplitude;
+            cameraTransform.localPosition = new Vector3(cameraTransform.localPosition.x, defaultCameraY + bobbingOffset, cameraTransform.localPosition.z);
+        }
+        else
+        {
+            // Reinicia la posición de la cámara cuando el jugador se detiene
+            bobbingTimer = 0;
+            cameraTransform.localPosition = new Vector3(cameraTransform.localPosition.x, defaultCameraY, cameraTransform.localPosition.z);
+        }
 
         if (RaycastCam.lastimado)
             moveSpeed = 2;
@@ -85,7 +125,6 @@ public class PlayerMovement : MonoBehaviour
                     Running = true;
                     moveSpeed = 6;
                 }
-
                 else if (Input.GetKeyDown(KeyCode.LeftControl) && !Running)
                 {
                     transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
@@ -100,7 +139,6 @@ public class PlayerMovement : MonoBehaviour
                     else
                         moveSpeed = 3;
                 }
-
                 else if (Input.GetKeyUp(KeyCode.LeftShift))
                 {
                     moveSpeed = 3;
@@ -120,7 +158,6 @@ public class PlayerMovement : MonoBehaviour
                 stamina -= staminaDrain * Time.deltaTime;
             }
 
-
             if (stamina <= 0)
             {
                 tired = true;
@@ -133,16 +170,15 @@ public class PlayerMovement : MonoBehaviour
                 respirar.enabled = false;
                 tired = false;
             }
-
         }
 
-        // ground check
+        // Ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-        //handle drag
+        // Handle drag
         if (grounded)
         {
-            rb.drag = groundDrag; 
+            rb.drag = groundDrag;
         }
         else
         {
@@ -155,8 +191,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(grounded)
-        MovePlayer();
+        if (grounded)
+            MovePlayer();
     }
 
     private void MyInput()
@@ -164,57 +200,50 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        //when to jump
-
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        // When to jump
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
-                readyToJump = false;
+            readyToJump = false;
 
-                Jump();
+            Jump();
 
-                Invoke(nameof(resetJump), jumpCoolDown);
+            Invoke(nameof(resetJump), jumpCoolDown);
         }
- 
     }
 
     private void MovePlayer()
     {
-        //calculate movement direction
+        // Calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        //on slope
+        // On slope
         if (OnSlope())
         {
-            rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 20f, ForceMode.Force);
-            if(rb.velocity.y > 0)
-            {
-                rb.AddForce(Vector3.down * 40f, ForceMode.Force);
-            }
+            Vector3 slopeDirection = GetSlopeMoveDirection() * moveSpeed * 20f;
+            slopeDirection.y = Mathf.Clamp(slopeDirection.y, -10f, 0f);  // Limitar el movimiento vertical hacia abajo
+            rb.AddForce(slopeDirection, ForceMode.Force);
         }
-
-        // on ground
-        if (grounded)
+        else if (grounded)
         {
+            // On ground
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         }
-
-        //in air
-        else if (!grounded)
-        { 
+        else
+        {
+            // In air
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
         }
 
-        //turn off gravity while on slope
-        rb.useGravity = !OnSlope();
+        // Mantén la gravedad activada en todo momento
+        rb.useGravity = true;
     }
 
     private void SpeedControl()
     {
         Vector3 limitVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        //limit velocity is needed
-
-    if(limitVel.magnitude > moveSpeed)
+        // Limit velocity if needed
+        if (limitVel.magnitude > moveSpeed)
         {
             Vector3 limitedVel = limitVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
@@ -223,16 +252,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        //recetear la velocidad de y
+        // Resetear la velocidad en Y
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);   
+        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
     private void resetJump()
     {
         readyToJump = true;
     }
-
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -253,11 +281,11 @@ public class PlayerMovement : MonoBehaviour
     private void DenyFalse()
     {
         mon2.deny = false;
-    }   
+    }
 
     private bool OnSlope()
     {
-        if(Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight * 0.5f + 0.3f))
+        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight * 0.5f + 0.3f))
         {
             float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
             return angle < maxSlopeAngle && angle != 0;
@@ -269,6 +297,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
     }
+
     public void die()
     {
         Destroy(gameObject);
