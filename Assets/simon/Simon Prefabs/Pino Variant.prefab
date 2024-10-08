@@ -97,6 +97,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb0363c66c127d4187dbebbcee12b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4335915141285990618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428539262379036360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0491714, y: 18.562998, z: 1.1145954}
+  m_Center: {x: -0.024662018, y: 9.022418, z: 0.042759895}
 --- !u!23 &3788761194051579677 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: f8105bf8a29c67941a66417df5fc68e7, type: 3}

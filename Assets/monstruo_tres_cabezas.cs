@@ -12,12 +12,13 @@ public class monstruo_tres_cabezas : MonoBehaviour
     public GameObject jumpscareNoise;
     public GameObject blackScreen;
     public GameObject youdied;
+    public GameObject monstruoMateriales;
 
     // Start is called before the first frame update
     void Start()
     {
         cam2.enabled = false;
-        anim = GetComponent<Animator>();
+        anim = monstruoMateriales.GetComponent<Animator>();
         blackScreen.SetActive(false);
     }
 

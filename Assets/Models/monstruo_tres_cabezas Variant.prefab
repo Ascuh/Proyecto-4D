@@ -210,8 +210,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d59498850fd25114e9beb127fb5d0b89, type: 3}
       propertyPath: m_Name
-      value: monstruo_tres_cabezas
+      value: monstruo_tres_cabezas Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4223765708901013799, guid: d59498850fd25114e9beb127fb5d0b89, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22d2b8043516559438c3dd89db7e4f78, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d59498850fd25114e9beb127fb5d0b89, type: 3}
 --- !u!1 &7460802377894266994 stripped
@@ -255,7 +259,10 @@ MonoBehaviour:
   cam2: {fileID: 1876724133}
   anim: {fileID: 2060268450}
   player: {fileID: 0}
+  jumpscareNoise: {fileID: 0}
   blackScreen: {fileID: 0}
+  youdied: {fileID: 0}
+  monstruoMateriales: {fileID: 0}
 --- !u!4 &7836765378733101768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d59498850fd25114e9beb127fb5d0b89, type: 3}

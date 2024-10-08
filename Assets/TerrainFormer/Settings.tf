@@ -20,7 +20,7 @@
                 "invertFalloff": false,
                 "selectedBrushTab": "All",
                 "selectedBrushId": "_DefaultFalloffBrushName",
-                "brushSize": 13.0,
+                "brushSize": 30.0,
                 "brushSpeed": 0.10000000149011612,
                 "brushRoundness": 1.0,
                 "brushAngle": 0.0,

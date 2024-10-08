@@ -64,7 +64,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: monstruo_tres_cabezas
@@ -124,7 +124,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1371610804113439239, guid: d59498850fd25114e9beb127fb5d0b89, type: 3}
+  m_Motion: {fileID: -9020098983121444822, guid: 5d4d466ef3d68e24cb868f4246a0cd0a, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -151,7 +151,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -8088513084936773303, guid: d59498850fd25114e9beb127fb5d0b89, type: 3}
+  m_Motion: {fileID: -5924968117348470978, guid: 5d4d466ef3d68e24cb868f4246a0cd0a, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
