@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class seeMonster : MonoBehaviour
+public class npcSeeMonster : MonoBehaviour
 {
     public Transform player;            // El jugador a seguir
-    public float visionRadius;    // Distancia máxima de detección
-    public float visionAngle;     // Ángulo del campo de visión
-    public float attackDistance;   // Distancia mínima para atacar
-    public Transform[] waypoints;       // Waypoints para deambular
+    public float visionRadius = 10f;    // Distancia máxima de detección
+    public float visionAngle = 45f;     // Ángulo del campo de visión
+    public float attackDistance = 2f;   // Distancia mínima para atacar
     private NavMeshAgent agent;         // Agente NavMesh del monstruo
     private bool playerInSight = false; // Si el jugador está en el campo de visión
-    private int currentWaypoint = 0;    // Índice del waypoint actual
-    public monstruo_tres_cabezas Monstruo_Tres_Cabezas;
+    private bool hasSeenPlayer = false; // Si el monstruo ha visto al jugador alguna vez
+    public monstruo_tres_cabezas Monstruo_Tres_Cabezas; // Clase que controla la animación de ataque del monstruo
+    public GameObject pasos; // Efecto de sonido de pasos
 
     void Start()
     {
@@ -38,9 +38,12 @@ public class seeMonster : MonoBehaviour
     {
         DetectPlayer();
 
-        if (playerInSight)
+        // Si el monstruo ha visto al jugador una vez, lo seguirá para siempre
+        if (hasSeenPlayer)
         {
-            // Si el jugador está en el campo de visión, seguirlo
+            pasos.SetActive(true);  // Activa el sonido de pasos
+
+            // Seguir al jugador
             agent.SetDestination(player.position);
 
             // Verifica si el monstruo está lo suficientemente cerca como para atacar
@@ -53,7 +56,8 @@ public class seeMonster : MonoBehaviour
         }
         else
         {
-            Patrol();
+            // Si el jugador no está a la vista, el monstruo se queda quieto
+            agent.SetDestination(transform.position);
         }
     }
 
@@ -80,6 +84,7 @@ public class seeMonster : MonoBehaviour
                     if (hit.transform == player)
                     {
                         playerInSight = true;
+                        hasSeenPlayer = true; // El monstruo ahora siempre te seguirá
                         return;
                     }
                 }
@@ -88,16 +93,4 @@ public class seeMonster : MonoBehaviour
 
         playerInSight = false;
     }
-
-    void Patrol()
-    {
-        // Si el monstruo ha llegado al waypoint actual, ir al siguiente
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
-        {
-            currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
-            agent.SetDestination(waypoints[currentWaypoint].position);
-        }
-    }
-
-  
 }

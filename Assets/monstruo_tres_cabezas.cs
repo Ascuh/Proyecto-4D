@@ -9,7 +9,9 @@ public class monstruo_tres_cabezas : MonoBehaviour
     [SerializeField] Camera cam2;
     [SerializeField] Animator anim;
     public GameObject player;
+    public GameObject jumpscareNoise;
     public GameObject blackScreen;
+    public GameObject youdied;
 
     // Start is called before the first frame update
     void Start()
@@ -19,20 +21,13 @@ public class monstruo_tres_cabezas : MonoBehaviour
         blackScreen.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            attackAnim();
-        }
-    }
 
-    void attackAnim ()
+    public void attackAnim ()
     {
         cam1.enabled = false;
         cam2.enabled = true;
         anim.SetBool("Kill", true);
+        jumpscareNoise.SetActive(true);
         StartCoroutine(activarPantallaNegra());
     }
 
@@ -40,5 +35,10 @@ public class monstruo_tres_cabezas : MonoBehaviour
     {
         yield return new WaitForSeconds(.65f);
         blackScreen.SetActive(true);
-    } 
+        yield return new WaitForSeconds(1f);
+        blackScreen.SetActive(false);
+        youdied.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 }
