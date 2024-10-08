@@ -26,6 +26,8 @@ public class ganaste : MonoBehaviour
         {
             textoGanaste.SetActive(true);
             sonidoGanaste.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

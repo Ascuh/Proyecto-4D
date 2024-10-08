@@ -11,10 +11,22 @@ public class spiderSpawner : MonoBehaviour
     private bool spawning = false; // Para evitar que se inicie más de una vez la rutina de spawn
     public Transform spawnPoint;
 
+    // Este método se llama al iniciar el script
+    void Start()
+    {
+        // Si el spawnPoint no está asignado manualmente en el inspector
+        if (spawnPoint == null)
+        {
+            // Asigna el primer hijo del objeto como spawnPoint
+            spawnPoint = transform.GetChild(0);
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         // Verifica si el objeto que entró al trigger tiene el tag "Player"
-        if (other.CompareTag("Player") && !spawning) { 
+        if (other.CompareTag("Player") && !spawning)
+        {
             // Inicia la rutina de spawn si el jugador entra
             StartCoroutine(SpawnSpider());
         }
