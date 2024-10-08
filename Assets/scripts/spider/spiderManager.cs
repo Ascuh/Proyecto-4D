@@ -12,6 +12,8 @@ public class spiderManager : MonoBehaviour
     public GameObject player;
     public GameObject muerteAraña;
     public GameObject dolorAraña;
+    public GameObject moriste;
+    [SerializeField] textos Textos;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +53,7 @@ public class spiderManager : MonoBehaviour
 
     private IEnumerator arañaAndate()
     {
+        StartCoroutine(Textos.Araña());
         dolorAraña.SetActive(true);
         spider.SetActive(true);
         yield return new WaitForSeconds(3f);
@@ -61,10 +64,10 @@ public class spiderManager : MonoBehaviour
     private IEnumerator moristePorAraña()
     {
         muerteAraña.SetActive(true);
+        moriste.SetActive(true);
         yield return new WaitForSeconds(3f);
         muerteAraña.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        SceneManager.LoadScene(0);
     }
 }
