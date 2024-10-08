@@ -9,6 +9,7 @@ public class spiderSpawner : MonoBehaviour
     public float spawnInterval = 0.5f; // Tiempo entre cada spawn
     private int currentSpiderCount = 0; // Contador de arañas
     private bool spawning = false; // Para evitar que se inicie más de una vez la rutina de spawn
+    public Transform spawnPoint;
 
     void OnTriggerEnter(Collider other)
     {
@@ -26,7 +27,7 @@ public class spiderSpawner : MonoBehaviour
         while (currentSpiderCount < maxSpiders)
         {
             // Instancia una nueva araña
-            Instantiate(spiderPrefab, transform.position, transform.rotation);
+            Instantiate(spiderPrefab, spawnPoint.position, spawnPoint.rotation);
 
             // Aumenta el contador de arañas
             currentSpiderCount++;
