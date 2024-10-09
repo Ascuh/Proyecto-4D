@@ -12,10 +12,12 @@ public class Zoom : MonoBehaviour
     [SerializeField] float maxFOV;
     bool alreadyZoomed;
     PlayerCam playerCam;
+    Camera cam;  // Referencia a la cámara
 
     private void Start()
     {
         playerCam = FindObjectOfType<PlayerCam>();
+        cam = Camera.main;  // Guarda la cámara principal
     }
 
     private void Update()
@@ -28,9 +30,17 @@ public class Zoom : MonoBehaviour
         if (x)
         {
             playerCam.zoom = true;
-            Camera.main.transform.LookAt(target);
-            orientation.transform.LookAt(target);
-            zoomIn();
+            if (cam != null)  // Asegúrate de que cam no sea nulo
+            {
+                cam.transform.LookAt(target);
+                zoomIn();
+            }
+
+            if (orientation != null)  // Verifica que orientation no sea nulo
+            {
+                orientation.transform.LookAt(target);
+            }
+
             alreadyZoomed = true;
         }
         else
@@ -38,24 +48,24 @@ public class Zoom : MonoBehaviour
             zoomOut();
             playerCam.zoom = false;
         }
-   
     }
 
     private void zoomIn()
     {
-        if(Camera.main.fieldOfView > minFOV)
-            Camera.main.fieldOfView--;
-        if (Camera.main.fieldOfView <= minFOV)
+        if (cam != null && cam.fieldOfView > minFOV)
+            cam.fieldOfView--;
+
+        if (cam != null && cam.fieldOfView <= minFOV)
             Invoke("xFalse", 1);
     }
 
     private void zoomOut()
     {
-        if (Camera.main.fieldOfView < maxFOV)
-            Camera.main.fieldOfView++;
+        if (cam != null && cam.fieldOfView < maxFOV)
+            cam.fieldOfView++;
     }
 
-    private void xFalse()
+    public void xFalse()  // Hacer público para que Invoke funcione
     {
         x = false;
     }

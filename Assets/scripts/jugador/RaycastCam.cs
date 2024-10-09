@@ -220,16 +220,20 @@ public class RaycastCam : MonoBehaviour
         //script de los cajones
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Cajon")))
         {
-            textoCajon.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            if(textoCajon != null)
             {
-                toco.collider.gameObject.GetComponent<Cajon>().Interactuar();
+                textoCajon.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    toco.collider.gameObject.GetComponent<Cajon>().Interactuar();
+                }
+                }
+                else
+                {
+                    textoCajon.SetActive(false);
+                }
             }
-        }
-        else
-        {
-            textoCajon.SetActive(false);
-        }
+
 
         //script de las luces
         if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Perilla")))
@@ -246,30 +250,35 @@ public class RaycastCam : MonoBehaviour
             tocandoPerilla = false;
         }
 
-        //script del generador
-        if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Generador")))
-        {
-            tocandoGenerador = true;
-            if (!Generador.generador)
+            if(textoGenerador != null)
             {
-            textoGenerador.SetActive(true);
-            }
-            else
-            {
-                textoGenerador.SetActive(false);
+                //script del generador
+                if (Physics.Raycast(Camara.position, Camara.forward, out toco, DistanciaRay, LayerMask.GetMask("Generador")))
+                {
+
+                    tocandoGenerador = true;
+                    if (!Generador.generador)
+                    {
+                    textoGenerador.SetActive(true);
+                    }
+                    else
+                    {
+                        textoGenerador.SetActive(false);
+                    }
+
+                    if (tocandoGenerador && Input.GetKeyDown(KeyCode.E))
+                    {
+                        toco.collider.gameObject.GetComponent<Generador>().funcionamiento();
+                    }
+
+                }
+                else
+                {
+                    textoGenerador.SetActive(false);
+                    tocandoGenerador = false;
+                }
             }
 
-            if (tocandoGenerador && Input.GetKeyDown(KeyCode.E))
-            {
-                toco.collider.gameObject.GetComponent<Generador>().funcionamiento();
-            }
-
-        }
-        else
-        {
-            textoGenerador.SetActive(false);
-            tocandoGenerador = false;
-        }
 
     }
 
