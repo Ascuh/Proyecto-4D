@@ -10,6 +10,7 @@ public class spider : MonoBehaviour
     private NavMeshAgent agent;  // Referencia al NavMeshAgent
     private Transform player;     // Referencia al transform del jugador
     spiderManager SpiderManager;
+    PlayerMovement playerMovement;
 
     void Start()
     {
@@ -25,6 +26,8 @@ public class spider : MonoBehaviour
         {
             Debug.LogError("No se encontró el componente SpiderManager en este objeto.");
         }
+
+        playerMovement = FindObjectOfType<PlayerMovement>().gameObject.GetComponent<PlayerMovement>();
     }
 
     void Update()

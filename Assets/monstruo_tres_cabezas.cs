@@ -13,6 +13,9 @@ public class monstruo_tres_cabezas : MonoBehaviour
     public GameObject blackScreen;
     public GameObject youdied;
     public GameObject monstruoMateriales;
+    [SerializeField] GameObject flashlight;
+
+    PlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,7 @@ public class monstruo_tres_cabezas : MonoBehaviour
         cam2.enabled = false;
         anim = monstruoMateriales.GetComponent<Animator>();
         blackScreen.SetActive(false);
+        playerMovement = FindObjectOfType<PlayerMovement>().gameObject.GetComponent<PlayerMovement>();
     }
 
 
@@ -30,6 +34,8 @@ public class monstruo_tres_cabezas : MonoBehaviour
         anim.SetBool("Kill", true);
         jumpscareNoise.SetActive(true);
         StartCoroutine(activarPantallaNegra());
+        playerMovement.die();
+        flashlight.SetActive(false);
     }
 
     IEnumerator activarPantallaNegra()

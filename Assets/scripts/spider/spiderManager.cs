@@ -14,10 +14,13 @@ public class spiderManager : MonoBehaviour
     public GameObject dolorAraña;
     public GameObject moriste;
     [SerializeField] textos Textos;
+    PlayerMovement playerMovement;
+    [SerializeField] GameObject flashlight;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerMovement = FindObjectOfType<PlayerMovement>().gameObject.GetComponent<PlayerMovement>();
         player = GameObject.FindGameObjectWithTag("Player"); 
 
         if (player == null)
@@ -65,6 +68,8 @@ public class spiderManager : MonoBehaviour
     {
         muerteAraña.SetActive(true);
         moriste.SetActive(true);
+        playerMovement.die();
+        flashlight.SetActive(false);
         yield return new WaitForSeconds(3f);
         muerteAraña.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
