@@ -9,16 +9,16 @@ public class spiderSpawner : MonoBehaviour
     public float spawnInterval = 0.5f; // Tiempo entre cada spawn
     private int currentSpiderCount = 0; // Contador de arañas
     private bool spawning = false; // Para evitar que se inicie más de una vez la rutina de spawn
-    public Transform spawnPoint;
 
-    // Este método se llama al iniciar el script
+    // Array de puntos de spawn
+    public Transform[] spawnPoints;
+
     void Start()
     {
-        // Si el spawnPoint no está asignado manualmente en el inspector
-        if (spawnPoint == null)
+        // Verifica si hay puntos de spawn asignados
+        if (spawnPoints.Length == 0)
         {
-            // Asigna el primer hijo del objeto como spawnPoint
-            spawnPoint = transform.GetChild(0);
+            Debug.LogError("No se han asignado puntos de spawn.");
         }
     }
 
@@ -35,11 +35,17 @@ public class spiderSpawner : MonoBehaviour
     IEnumerator SpawnSpider()
     {
         spawning = true; // Marca que el spawn ha comenzado
-        // Mientras no se haya alcanzado el máximo número de arañas
+                         // Mientras no se haya alcanzado el máximo número de arañas
         while (currentSpiderCount < maxSpiders)
         {
+            // Elige un spawn point aleatorio
+            Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+
             // Instancia una nueva araña
-            Instantiate(spiderPrefab, spawnPoint.position, spawnPoint.rotation);
+            GameObject newSpider = Instantiate(spiderPrefab, randomSpawnPoint.position, randomSpawnPoint.rotation);
+
+            // Asegúrate de que la araña esté activa
+            newSpider.SetActive(true);
 
             // Aumenta el contador de arañas
             currentSpiderCount++;
