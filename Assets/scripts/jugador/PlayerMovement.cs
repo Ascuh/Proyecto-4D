@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float airMultiplier;
     bool readyToJump = true;
 
-    [Header("keybinds")]
+    [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
 
     [Header("Ground Check")]
@@ -58,10 +58,17 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Camera Bobbing")]
     public Transform cameraTransform; // Referencia a la cámara
-    public float bobFrequency = 3f;   // Frecuencia del movimiento
-    public float bobAmplitude = 0.05f; // Amplitud del movimiento (qué tanto se mueve)
-    private float defaultCameraY;      // Para recordar la posición original de la cámara
-    private float bobbingTimer;
+    public float cameraBobFrequency = 3f;   // Frecuencia del movimiento de la cámara
+    public float cameraBobAmplitude = 0.05f; // Amplitud del movimiento de la cámara
+    private float defaultCameraY;            // Para recordar la posición original de la cámara
+    private float cameraBobbingTimer;
+
+    [Header("Weapon Bobbing")]
+    public Transform weaponTransform; // Referencia al objeto del arma
+    public float weaponBobFrequency = 7f;   // Frecuencia del movimiento del arma (inicialmente para caminar)
+    public float weaponBobAmplitude = 0.02f; // Amplitud del movimiento del arma (inicialmente para caminar)
+    private float defaultWeaponY;           // Para recordar la posición original del arma
+    private float weaponBobbingTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -74,13 +81,14 @@ public class PlayerMovement : MonoBehaviour
 
         startYscale = transform.localScale.y;
 
-        // Posición original de la cámara
+        // Posición original de la cámara y del arma
         defaultCameraY = cameraTransform.localPosition.y;
+        if (weaponTransform != null)
+            defaultWeaponY = weaponTransform.localPosition.y;
 
         // Reinicia la gravedad al valor inicial
         Physics.gravity = new Vector3(0, -9.81f * modificadorGravedad, 0);
     }
-
 
     // Update is called once per frame
     void Update()
@@ -88,32 +96,53 @@ public class PlayerMovement : MonoBehaviour
         // Control de bobbing de la cámara basado en si está corriendo o caminando
         if (Running)
         {
-            bobFrequency = 15f;  // Frecuencia para correr
-            bobAmplitude = 0.05f;  // Amplitud para correr
+            cameraBobFrequency = 15f;  // Frecuencia para correr
+            cameraBobAmplitude = 0.05f;  // Amplitud para correr
+
+            // Bobbing del arma cuando corre
+            weaponBobFrequency = 12f;
+            weaponBobAmplitude = 0.03f;
         }
         else
         {
-            bobFrequency = 10f;  // Frecuencia para caminar
-            bobAmplitude = 0.03f;  // Amplitud para caminar
-        }
+            cameraBobFrequency = 10f;  // Frecuencia para caminar
+            cameraBobAmplitude = 0.03f;  // Amplitud para caminar
 
-        // Hacer un Vector para el shader, usado para el movimiento del pasto respecto a la posición del jugador
-        Shader.SetGlobalVector("_Player", transform.position + Vector3.up * playerCollider.radius);
+            // Bobbing del arma cuando camina
+            weaponBobFrequency = 7f;
+            weaponBobAmplitude = 0.02f;
+        }
 
         // Movimiento de la cámara
         if (grounded && (horizontalInput != 0 || verticalInput != 0))
         {
-            bobbingTimer += Time.deltaTime * bobFrequency;
-            float bobbingOffset = Mathf.Sin(bobbingTimer) * bobAmplitude;
-            cameraTransform.localPosition = new Vector3(cameraTransform.localPosition.x, defaultCameraY + bobbingOffset, cameraTransform.localPosition.z);
+            cameraBobbingTimer += Time.deltaTime * cameraBobFrequency;
+            float cameraBobbingOffset = Mathf.Sin(cameraBobbingTimer) * cameraBobAmplitude;
+            cameraTransform.localPosition = new Vector3(cameraTransform.localPosition.x, defaultCameraY + cameraBobbingOffset, cameraTransform.localPosition.z);
+
+            // Movimiento del arma con su propio bobbing
+            weaponBobbingTimer += Time.deltaTime * weaponBobFrequency;
+            float weaponBobbingOffset = Mathf.Sin(weaponBobbingTimer) * weaponBobAmplitude;
+            if (weaponTransform != null)
+            {
+                weaponTransform.localPosition = new Vector3(weaponTransform.localPosition.x, defaultWeaponY + weaponBobbingOffset, weaponTransform.localPosition.z);
+            }
         }
         else
         {
             // Reinicia la posición de la cámara cuando el jugador se detiene
-            bobbingTimer = 0;
+            cameraBobbingTimer = 0;
             cameraTransform.localPosition = new Vector3(cameraTransform.localPosition.x, defaultCameraY, cameraTransform.localPosition.z);
+
+            // Reinicia la posición del arma también
+            weaponBobbingTimer = 0;
+            if (weaponTransform != null)
+            {
+                weaponTransform.localPosition = new Vector3(weaponTransform.localPosition.x, defaultWeaponY, weaponTransform.localPosition.z);
+            }
         }
 
+        // El resto del código no cambia
         if (RaycastCam.lastimado)
             moveSpeed = 2;
         else
