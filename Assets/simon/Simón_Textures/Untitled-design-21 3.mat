@@ -85,16 +85,16 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.32272726
     - _GlossyReflections: 1
-    - _Interaction_Distance: 1
+    - _Interaction_Distance: 3
     - _Metallic: 0
     - _Mode: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.072
-    - _Scale: 0.2
+    - _Scale: 0.1
     - _Smoothness: 0.184
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 7
+    - _Speed: 3
     - _SrcBlend: 1
     - _Strength: 5
     - _UVSec: 0
