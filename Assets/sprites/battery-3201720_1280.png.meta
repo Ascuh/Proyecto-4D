@@ -103,18 +103,810 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: battery-3201720_1280_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 898
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ba589c7bd2d3b4fa6f4db4bf5f2845
+      internalID: -1595408386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 898
+        width: 96
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec5e9a478fbffe4883506b136a8dbb9
+      internalID: -1669917491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_2
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 898
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe915e316ce7b84c9fcc6d52024280c
+      internalID: 829487676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_3
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 898
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc0076f0e473824c9ec00d493be9817
+      internalID: 1590382055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_4
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 898
+        width: 96
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b791632cfb26c3c45810dab2a2249df0
+      internalID: -2020374421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_5
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 898
+        width: 94
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0499bcc6a7142d540a9afa970cca8de4
+      internalID: -691800342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_6
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 898
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eace66d3da75d14b853dbc0362b0559
+      internalID: 168496229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_7
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 898
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8275ae1ec41a4cd41bf8e9ee4bf76d73
+      internalID: 1294272565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_8
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 898
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c1ee58a2e618d449389df289066ff6
+      internalID: -1407235644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 598
+        width: 91
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceedfc87d6b578744985c7601d0f9b8c
+      internalID: -1601547804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_10
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 598
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6919190b95f4e41b43ec4fa6265969
+      internalID: -147821928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_11
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 598
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ac06aea4df4b943babde7fe11edbc0
+      internalID: -901902988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_12
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 598
+        width: 93
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfc6a1cd636cb34fa61d115e8dfb0a6
+      internalID: -190127849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_13
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 598
+        width: 96
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2b7af202c330d43b81fa8d8394fb7b
+      internalID: -1246051394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_14
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 598
+        width: 93
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66ccf9752a951544bc51009dfef7025
+      internalID: -2112581355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_15
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 598
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e784b7a27bc22b84b92a27de7d49a155
+      internalID: 1145158681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_16
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 598
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c0b49ba8b526b4da22876b7433c24c
+      internalID: -1543173248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_17
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 598
+        width: 91
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0d057857b7760488dda86419a7af59
+      internalID: -1809409333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 297
+        width: 91
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e600fae85dab5d49a13b33d79460f1b
+      internalID: 1726192559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_19
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 297
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a33a4b9e981e7e42a11f952fa65bb1d
+      internalID: -1190597530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_20
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 297
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e211041247e5048925b335ad92a521
+      internalID: -613110730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_21
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 297
+        width: 93
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a53f0552d02f44eadf31937b3238ae
+      internalID: -1071112083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_22
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 297
+        width: 96
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ef24c88e8f5414eafea721ab65be4a
+      internalID: 1671264041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_23
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 297
+        width: 93
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07399bc085eef3d4d8ae8938d6fc4eb3
+      internalID: -2039210644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_24
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 297
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d271c92f2042ccc4695b90521bf1f391
+      internalID: -932788556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_25
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 297
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da7a412cb43e224598d1bc1605b9121
+      internalID: 1897808265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_26
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 297
+        width: 91
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c23b33e69be54a409673377869c3ce8
+      internalID: -1084382028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07130f3f93513c43bc22d33f039f881
+      internalID: -345366559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_28
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1bd5b9fa73e5145a830c143e2becb2
+      internalID: 960522568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_29
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 0
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183ce55cf876d3f4f807b1be234014f1
+      internalID: -546723421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_30
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 0
+        width: 94
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da887ec21f1b4540a5bbd5cd07499a4
+      internalID: -1961518761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_31
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 0
+        width: 96
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a860309d487908a489877e2460af7187
+      internalID: -2138771112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_32
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 0
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860deff5800ac12409a37d57cde234e4
+      internalID: -1166255540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_33
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 0
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cefda1c492085641b5f4c59a5f353df
+      internalID: -1821952573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_34
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 0
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9061508d8b974d447904af86cc68bd2b
+      internalID: -451547094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery-3201720_1280_35
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 0
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffec7f5fa932a7746a4bdc43c629ae44
+      internalID: -21352005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: df850941fc4919f43a576019516cd876
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      battery-3201720_1280_33: -1821952573
+      battery-3201720_1280_22: 1671264041
+      battery-3201720_1280_34: -451547094
+      battery-3201720_1280_13: -1246051394
+      battery-3201720_1280_0: -1595408386
+      battery-3201720_1280_11: -901902988
+      battery-3201720_1280_35: -21352005
+      battery-3201720_1280_29: -546723421
+      battery-3201720_1280_28: 960522568
+      battery-3201720_1280_31: -2138771112
+      battery-3201720_1280_32: -1166255540
+      battery-3201720_1280_25: 1897808265
+      battery-3201720_1280_8: -1407235644
+      battery-3201720_1280_10: -147821928
+      battery-3201720_1280_2: 829487676
+      battery-3201720_1280_21: -1071112083
+      battery-3201720_1280_4: -2020374421
+      battery-3201720_1280_5: -691800342
+      battery-3201720_1280_7: 1294272565
+      battery-3201720_1280_3: 1590382055
+      battery-3201720_1280_24: -932788556
+      battery-3201720_1280_19: -1190597530
+      battery-3201720_1280_1: -1669917491
+      battery-3201720_1280_12: -190127849
+      battery-3201720_1280_17: -1809409333
+      battery-3201720_1280_6: 168496229
+      battery-3201720_1280_16: -1543173248
+      battery-3201720_1280_23: -2039210644
+      battery-3201720_1280_9: -1601547804
+      battery-3201720_1280_15: 1145158681
+      battery-3201720_1280_26: -1084382028
+      battery-3201720_1280_14: -2112581355
+      battery-3201720_1280_20: -613110730
+      battery-3201720_1280_27: -345366559
+      battery-3201720_1280_18: 1726192559
+      battery-3201720_1280_30: -1961518761
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
