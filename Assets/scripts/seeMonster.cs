@@ -17,6 +17,8 @@ public class seeMonster : MonoBehaviour
     public GameObject pasos;            // GameObject que representa el sonido de pasos
     private Vector3 lastPosition;       // Para almacenar la posición anterior del monstruo
     private bool isMoving = false;      // Si el monstruo se está moviendo
+    private bool canMove = true;        // Variable para controlar si el monstruo puede moverse
+    [SerializeField] GameObject electricidad;
 
     void Start()
     {
@@ -40,6 +42,8 @@ public class seeMonster : MonoBehaviour
 
     void Update()
     {
+        if (!canMove) return;  // Si no puede moverse, sale de la función
+
         DetectPlayer();
 
         // Verificar si el monstruo está en movimiento
@@ -115,5 +119,20 @@ public class seeMonster : MonoBehaviour
             currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
             agent.SetDestination(waypoints[currentWaypoint].position);
         }
+    }
+
+    // Función pública para detener el movimiento
+    public void StopMovement()
+    {
+        canMove = false;
+        agent.ResetPath();  // Detener el monstruo
+        electricidad.SetActive(true);
+    }
+
+    // Función pública para reactivar el movimiento
+    public void StartMovement()
+    {
+        canMove = true;
+        electricidad.SetActive(false);
     }
 }
