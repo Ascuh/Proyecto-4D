@@ -8,7 +8,7 @@ public class detectarAlejandose : MonoBehaviour
     public GameObject textoAlejandose;
 
     // El tiempo que el GameObject permanecerá activado
-    public float activeTime = 5f;
+    public float activeTime = 3f;
 
     // Chequea si el objeto a colisionar es el jugador
     private void OnTriggerEnter(Collider other)

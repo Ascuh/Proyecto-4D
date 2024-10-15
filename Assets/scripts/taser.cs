@@ -14,6 +14,8 @@ public class taser : MonoBehaviour
     // Variable para controlar si el taser está en cooldown
     private bool puedeUsarTaser = true;
 
+    [SerializeField] taserRaycast TaserRaycast;
+
     void Update()
     {
         // Si se presiona el click izquierdo y no está en cooldown
@@ -28,6 +30,7 @@ public class taser : MonoBehaviour
             // Iniciar cooldown
             StartCoroutine(IniciarCooldownLighting());
             StartCoroutine(IniciarCooldownGun());
+            TaserRaycast.DetectarMonstruo();
         }
     }
 
