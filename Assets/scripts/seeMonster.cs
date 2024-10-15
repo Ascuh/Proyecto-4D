@@ -14,6 +14,9 @@ public class seeMonster : MonoBehaviour
     private bool playerInSight = false; // Si el jugador está en el campo de visión
     private int currentWaypoint = 0;    // Índice del waypoint actual
     public monstruo_tres_cabezas Monstruo_Tres_Cabezas;
+    public GameObject pasos;            // GameObject que representa el sonido de pasos
+    private Vector3 lastPosition;       // Para almacenar la posición anterior del monstruo
+    private bool isMoving = false;      // Si el monstruo se está moviendo
 
     void Start()
     {
@@ -32,11 +35,26 @@ public class seeMonster : MonoBehaviour
         }
 
         agent = GetComponent<NavMeshAgent>();
+        lastPosition = transform.position; // Inicializa la posición inicial
     }
 
     void Update()
     {
         DetectPlayer();
+
+        // Verificar si el monstruo está en movimiento
+        isMoving = Vector3.Distance(lastPosition, transform.position) > 0.01f;
+
+        if (isMoving)
+        {
+            pasos.SetActive(true); // Activa el objeto de sonido de pasos
+        }
+        else
+        {
+            pasos.SetActive(false); // Desactiva el objeto de sonido de pasos
+        }
+
+        lastPosition = transform.position; // Actualiza la última posición
 
         if (playerInSight)
         {
@@ -98,6 +116,4 @@ public class seeMonster : MonoBehaviour
             agent.SetDestination(waypoints[currentWaypoint].position);
         }
     }
-
-  
 }

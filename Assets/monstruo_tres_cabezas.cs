@@ -14,6 +14,7 @@ public class monstruo_tres_cabezas : MonoBehaviour
     public GameObject youdied;
     public GameObject monstruoMateriales;
     [SerializeField] GameObject flashlight;
+    [SerializeField] GameObject flashlightAnimation;
 
     PlayerMovement playerMovement;
 
@@ -36,6 +37,7 @@ public class monstruo_tres_cabezas : MonoBehaviour
         StartCoroutine(activarPantallaNegra());
         playerMovement.die();
         flashlight.SetActive(false);
+        flashlightAnimation.SetActive(true);
     }
 
     IEnumerator activarPantallaNegra()
