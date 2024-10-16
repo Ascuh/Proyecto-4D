@@ -27,6 +27,13 @@ public class monstruo_tres_cabezas : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>().gameObject.GetComponent<PlayerMovement>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            anim.SetBool("Stun", true);
+        }
+    }
 
     public void attackAnim ()
     {
