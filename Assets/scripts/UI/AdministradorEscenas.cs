@@ -19,6 +19,7 @@ public class AdministradorEscenas : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        Time.timeScale = 1;
     }
 
     public void QuitGame()

@@ -10,6 +10,7 @@ public class Flashlight : MonoBehaviour
     [SerializeField] int bateriaPorFase;
     [SerializeField] GameObject[] estadoBateria;
     private int estadoActualBateria = 0;
+    [SerializeField] GameObject linternaFallandoText;
 
     private Light flashlightLight;
 
@@ -58,6 +59,7 @@ public class Flashlight : MonoBehaviour
         }
         else if (estadoActualBateria == 2 && !yaPaso)
         {
+            linternaFallandoText.SetActive(true);
             flashlightLight.intensity = 2f;
             intensidadActual = 2;
             yaPaso = true;
