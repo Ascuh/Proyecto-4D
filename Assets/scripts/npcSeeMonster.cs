@@ -13,7 +13,9 @@ public class npcSeeMonster : MonoBehaviour
     private bool playerInSight = false; // Si el jugador está en el campo de visión
     private bool hasSeenPlayer = false; // Si el monstruo ha visto al jugador alguna vez
     public monstruo_tres_cabezas Monstruo_Tres_Cabezas; // Clase que controla la animación de ataque del monstruo
-    public GameObject pasos; // Efecto de sonido de pasos
+    public GameObject pasos;            // Efecto de sonido de pasos
+    private bool canMove = true;        // Variable para controlar si el monstruo puede moverse
+    [SerializeField] GameObject electricidad;
 
     void Start()
     {
@@ -37,6 +39,13 @@ public class npcSeeMonster : MonoBehaviour
     void Update()
     {
         DetectPlayer();
+
+        // Verifica si el monstruo puede moverse
+        if (!canMove)
+        {
+            // Si no puede moverse, sal de la función
+            return;
+        }
 
         // Si el monstruo ha visto al jugador una vez, lo seguirá para siempre
         if (hasSeenPlayer)
@@ -92,5 +101,21 @@ public class npcSeeMonster : MonoBehaviour
         }
 
         playerInSight = false;
+    }
+
+    public void StopMovement()
+    {
+        canMove = false;           // Desactiva el movimiento
+        agent.ResetPath();         // Detiene el monstruo
+        electricidad.SetActive(true);  // Activa la electricidad (rayo)
+        pasos.SetActive(false);    // Desactiva el sonido de pasos
+    }
+
+    // Función pública para reactivar el movimiento
+    public void StartMovement()
+    {
+        canMove = true;            // Reactiva el movimiento
+        electricidad.SetActive(false); // Desactiva la electricidad (rayo)
+        pasos.SetActive(true);     // Activa el sonido de pasos
     }
 }

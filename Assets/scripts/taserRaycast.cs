@@ -44,6 +44,19 @@ public class taserRaycast : MonoBehaviour
                     // Iniciar el stun
                     StartCoroutine(stun(SeeMonster));
                 }
+
+                else
+                {
+                    // Obtener el componente seeMonster del objeto impactado
+                    npcSeeMonster NpcSeeMonster = hit.collider.GetComponent<npcSeeMonster>();
+
+                    // Si el monstruo tiene el componente seeMonster
+                    if (NpcSeeMonster != null)
+                    {
+                        // Iniciar el stun
+                        StartCoroutine(stunNpc(NpcSeeMonster));
+                    }
+                }
             }
         }
     }
@@ -54,5 +67,12 @@ public class taserRaycast : MonoBehaviour
         SeeMonster.StopMovement();  // Detiene el monstruo
         yield return new WaitForSeconds(tiempoStun);  // Esperar ? segundos
         SeeMonster.StartMovement();  // Reactiva el movimiento del monstruo
+    }
+
+    IEnumerator stunNpc(npcSeeMonster NpcSeeMonster)
+    {
+        NpcSeeMonster.StopMovement();  // Detiene el monstruo
+        yield return new WaitForSeconds(tiempoStun);  // Esperar ? segundos
+        NpcSeeMonster.StartMovement();  // Reactiva el movimiento del monstruo
     }
 }

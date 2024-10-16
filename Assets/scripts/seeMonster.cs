@@ -107,7 +107,6 @@ public class seeMonster : MonoBehaviour
                 }
             }
         }
-
         playerInSight = false;
     }
 
@@ -127,6 +126,7 @@ public class seeMonster : MonoBehaviour
         canMove = false;
         agent.ResetPath();  // Detener el monstruo
         electricidad.SetActive(true);
+        pasos.SetActive(false);
     }
 
     // Función pública para reactivar el movimiento
@@ -134,5 +134,7 @@ public class seeMonster : MonoBehaviour
     {
         canMove = true;
         electricidad.SetActive(false);
+        pasos.SetActive(true);
     }
+
 }

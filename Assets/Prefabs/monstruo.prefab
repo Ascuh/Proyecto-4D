@@ -5045,58 +5045,40 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.03374504
+      time: 0.25701714
       value: 1
-      inSlope: -29.645792
-      outSlope: -29.645792
+      inSlope: -0.3033634
+      outSlope: -0.3033634
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.36424816
     - serializedVersion: 3
-      time: 0.054716565
-      value: 0.91270447
-      inSlope: -3.5140252
-      outSlope: -3.5140252
+      time: 0.5696378
+      value: 0.48146647
+      inSlope: -1.6788782
+      outSlope: -1.6788782
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0.8014449
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.20979781
-      value: 0.5638275
-      inSlope: -2.5444677
-      outSlope: -2.5444677
+      time: 0.799263
+      value: 0.1870183
+      inSlope: -1.6871074
+      outSlope: -1.6871074
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.7875398
-      outWeight: 1
-    - serializedVersion: 3
-      time: 0.35796538
-      value: 0.38989258
-      inSlope: -0.4632155
-      outSlope: -0.4632155
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.54724485
-      value: 0.2566223
-      inSlope: -0.115803875
-      outSlope: -0.115803875
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 0.03374504
-      inSlope: -0.033758488
-      outSlope: -0.033758488
+      value: 0
+      inSlope: -1.0559335
+      outSlope: -1.0559335
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 1
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -5486,6 +5468,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4889412856095150446}
     m_Modifications:
+    - target: {fileID: 1876724135, guid: b36423e48ba5a6f4c9507328c95d9f85, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2060268449, guid: b36423e48ba5a6f4c9507328c95d9f85, type: 3}
       propertyPath: anim
       value: 
